@@ -10,6 +10,11 @@
     --motion-duration: 0.3s;
 }
 
+@font-face {
+    font-family: 'BlackFuture';
+    src: url("/assets/BlackFuture.otf") format("opentype");
+}
+
 
                     /* Body Style */
 body {
