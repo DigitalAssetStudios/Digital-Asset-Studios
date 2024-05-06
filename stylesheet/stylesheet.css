@@ -104,11 +104,11 @@ body {
     text-align: center;
 }
 
-.landing-text-container h1 {
-    font-family: var(--main_font);
-    font-size: 7rem;
+.das-title {
+    padding-top: 200px;
     margin-bottom: 0;
     padding-bottom: 0;
+    width: 400px;
 }
 
 .landing-text-container h2 {
