@@ -230,26 +230,38 @@
 
 
         // Adds listning event to images to follow mouse cursor:
-        window.addEventListener('scroll', handleScroll);
-
         $(document).ready(function() {
-            $('#img-1, #img-2, #img-3').mousemove(function(e) {
-                let $this = $(this);
-                let boundingRect = this.getBoundingClientRect();
-                let offsetX = (e.pageX - (boundingRect.left + window.pageXOffset + boundingRect.width / 2));
-                let offsetY = (e.pageY - (boundingRect.top + window.pageYOffset + boundingRect.height / 2));
-                let movementStrength = 15; // Adjust this value to increase or decrease the effect strength
+            // Selector for the images
+            const images = $('#img-1, #img-2, #img-3');
 
-                let translateX = (offsetX / $this.width() * movementStrength);
-                let translateY = (offsetY / $this.height() * movementStrength);
+            // Handle mouse move event
+            images.mousemove(function(e) {
+                const $this = $(this);
+                const boundingRect = this.getBoundingClientRect();
+                const offsetX = e.pageX - (boundingRect.left + window.pageXOffset + boundingRect.width / 2);
+                const offsetY = e.pageY - (boundingRect.top + window.pageYOffset + boundingRect.height / 2);
+                const movementStrength = 15; // Adjust this value to increase or decrease the effect strength
+
+                const translateX = offsetX / $this.width() * movementStrength;
+                const translateY = offsetY / $this.height() * movementStrength;
 
                 $this.css('transform', `translate(${translateX}px, ${translateY}px)`);
+                });
+
+                // Reset transform on mouse out
+                images.mouseout(function() {
+                    $(this).css('transform', '');
+                });
+
+                // Optional: Add a debounced or throttled scroll event listener using vanilla JavaScript
+                window.addEventListener('scroll', handleScroll);
+
+                function handleScroll() {
+                    // Handle the scroll event here
+                    console.log('Scrolling...');
+                }
             });
 
-            $('#img-1, #img-2, #img-3').mouseout(function() {
-                $(this).css('transform', ''); // Reset transform on mouse out
-        });
-    });
 
 
     </script>
