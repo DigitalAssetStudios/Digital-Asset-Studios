@@ -424,7 +424,7 @@ body {
 .maps-text-container {
     text-align: center;
     color: black;
-    width: 70%;
+    width: 700px;
     margin-bottom: 30px;
     margin-top: 10px;
 }
@@ -439,6 +439,9 @@ body {
     width: 70%;
     margin-bottom: 60px;
     transition: var(--motion-duration) var(--motion-ease);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .google-maps-container:hover {
