@@ -365,7 +365,7 @@ body {
 
 .card-logo {
     width: 180px;
-    padding-top: 20px;
+    padding-top: 40px;
     margin: 0px auto;
     padding-left: 35px;
 }
@@ -378,18 +378,23 @@ body {
     padding-top: 17px;
 }
 
+.card-text {
+    text-align: center;
+    padding-top: 20px;
+}
+
 .go-text1 {
-    padding-top: 80px;
+    padding-top: 30px;
     padding-left: 30px
 }
 
 .go-text2 {
-    padding-top: 80px;
+    padding-top: 30px;
     padding-left: 30px;
 }
 
 .go-text3 {
-    padding-top: 60px;
+    padding-top: 15px;
     padding-left: 30px
 }
 
