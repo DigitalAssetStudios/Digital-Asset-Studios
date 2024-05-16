@@ -150,18 +150,18 @@ body {
 }
 
 .symbol1 {
-    width: 500px;
+    width: 26.042vw;
     height: auto;
-    top: -200px;
+    top: -100px;
     left: -200px;
     animation-name: rotateAndMoveanticlockwise;
 }
 
 .symbol2 {
-    width: 400px;
+    width: 20.833vw;
     height: auto;
     bottom: 250px;
-    right: -200px;
+    right: -100px;
     animation-name: rotateAndMove;
 }
 
@@ -237,7 +237,7 @@ body {
 }
 
 .symbol3 {
-    width: 150px;
+    width: 7.813vw;
     height: auto;
     top: 100px;
     left: -50px;
@@ -245,9 +245,9 @@ body {
 }
 
 .symbol4 {
-    width: 250px;
+    width: 23.021vw;
     height: auto;
-    top: -50px;
+    top: -150px;
     left: 50px;
     animation-name: rotateAndMoveanticlockwise;
 }
@@ -255,7 +255,7 @@ body {
 .symbol5 {
     width: 350px;
     height: auto;
-    top: -80px;
+    top: -200px;
     right: -100px;
     animation-name: rotateAndMoveanticlockwise;
 }
@@ -486,6 +486,10 @@ body {
     transform: scale(1.03);
 }
 
+#google-img {
+    width: 1000px;
+}
+
 #locationpin {
     width: 30px;
     position: absolute;
@@ -647,4 +651,109 @@ footer p {
     margin: 0px;
     padding: 15px;
     font-size: 12px;
+}
+
+
+                    /* Media Queries */
+
+@media (max-width: 1024px) {
+    .short-bio {
+        height: 55rem;
+    }
+
+    #img-1 {
+        width: 300px;
+    }
+
+    #img-2 {
+        width: 300px;
+    }
+
+    #img-3 {
+        width: 200px;
+        top: 250px;
+    }
+
+    .card-size {
+        height: 280px;
+        width: 200px;
+    }
+
+    .card-logo {
+        width: 130px;
+    }
+
+    .card-text {
+        padding-top: 0px;
+        font-size: 0.9rem;
+    }
+
+    .go-text1 {
+        padding-top: 20px;
+    }
+    
+    .go-text2 {
+        padding-top: 38px;
+    }
+    
+    .go-text3 {
+        padding-top: 18px;
+    }
+
+    .arrow {
+        opacity: 1;
+    }
+
+    #google-img {
+        width: 700px;
+    }
+
+    .form-block-container {
+        gap: 4rem;
+    }
+
+    .symbol1 {
+        top: -50px;
+        left: -90px;
+    }
+    .symbol2 {
+        bottom: 300px;
+        right: -100px;
+    }
+    .symbol3 {
+        top: 100px;
+        left: -30px;
+    }
+    .symbol4 {
+        top: -50px;
+        left: 50px;
+    }
+
+
+    
+    .symbol5 {
+        top: -200px;
+        right: -100px;
+    }
+    .symbol6 {
+        top: 280px;
+        right: -200px;
+    }
+    .symbol7 {
+        bottom: 80px;
+        left: -200px;
+    }
+    .symbol8 {
+        bottom: -100px;
+        left: 0px;
+    }
+    .symbol9 {
+        bottom: -80px;
+        right: 100px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
 }
