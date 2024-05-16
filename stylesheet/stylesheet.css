@@ -237,7 +237,7 @@ body {
 }
 
 .symbol3 {
-    width: 7.813vw;
+    width: 10vw;
     height: auto;
     top: 100px;
     left: -50px;
@@ -253,7 +253,7 @@ body {
 }
 
 .symbol5 {
-    width: 350px;
+    width: 25vw;
     height: auto;
     top: -200px;
     right: -100px;
@@ -261,7 +261,7 @@ body {
 }
 
 .symbol6 {
-    width: 450px;
+    width: 30vw;
     height: auto;
     top: 280px;
     right: -200px;
@@ -269,7 +269,7 @@ body {
 }
 
 .symbol7 {
-    width: 450px;
+    width: 30vw;
     height: auto;
     bottom: 80px;
     left: -200px;
@@ -277,7 +277,7 @@ body {
 }
 
 .symbol8 {
-    width: 350px;
+    width: 23vw;
     height: auto;
     bottom: -180px;
     left: 0px;
@@ -286,7 +286,7 @@ body {
 }
 
 .symbol9 {
-    width: 250px;
+    width: 25vw;
     height: auto;
     bottom: -80px;
     right: 100px;
@@ -728,28 +728,24 @@ footer p {
         top: -50px;
         left: 50px;
     }
-
-
-    
     .symbol5 {
-        top: -200px;
+        top: -100px;
         right: -100px;
     }
     .symbol6 {
         top: 280px;
-        right: -200px;
+        right: -100px;
     }
     .symbol7 {
-        bottom: 80px;
-        left: -200px;
+        bottom: 120px;
+        left: -100px;
     }
     .symbol8 {
-        bottom: -100px;
-        left: 0px;
+        bottom: -50px;
+        left: 50px;
     }
     .symbol9 {
-        bottom: -80px;
-        right: 100px;
+        bottom: -100px;
     }
 }
 
