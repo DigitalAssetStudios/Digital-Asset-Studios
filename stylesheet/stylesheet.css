@@ -708,6 +708,12 @@ footer p {
         width: 700px;
     }
 
+    #locationpin {
+        top: 150px;
+        left: 333px;
+        width: 20px;
+    }
+
     .form-block-container {
         gap: 4rem;
     }
@@ -751,5 +757,57 @@ footer p {
 
 
 @media (max-width: 480px) {
+    .landing-page{
+        height: 26rem;
+    }
+    .landing-text-container {
+        margin-top: 100px;
+    }
+    .landing-text-container img {
+        width: 200px;
+    }
+    .symbol1 {
+        top: 50px;
+        left: -20px;
+    }
+    .symbol2 {
+        bottom: 250px;
+        right: -20px;
+    }
+    .symbol3 {
+        top: -100px;
+        left: -10px;
+    }
+    .symbol4 {
+        top: -100px;
+        left: 20px;
+    }
+    .symbol5 {
+        top: 0px;
+        right: 0px;
+    }
+    .symbol6 {
+        top: 280px;
+        right: -100px;
+    }
+    .symbol7 {
+        bottom: 120px;
+        left: -100px;
+    }
+    .symbol8 {
+        bottom: -50px;
+        left: 50px;
+    }
+    .symbol9 {
+        bottom: -100px;
+    }
 
+    #google-img {
+        width: 200px;
+    }
+    #locationpin {
+        top: 150px;
+        left: 333px;
+        width: 20px;
+    }
 }
