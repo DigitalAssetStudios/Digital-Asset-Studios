@@ -764,7 +764,7 @@ footer p {
         margin-top: 100px;
     }
     .landing-text-container img {
-        width: 200px;
+        width: 280px;
     }
     .symbol1 {
         top: 50px;
@@ -775,11 +775,11 @@ footer p {
         right: -20px;
     }
     .symbol3 {
-        top: -100px;
+        top: -60px;
         left: -10px;
     }
     .symbol4 {
-        top: -100px;
+        top: -60px;
         left: 20px;
     }
     .symbol5 {
@@ -787,19 +787,38 @@ footer p {
         right: 0px;
     }
     .symbol6 {
-        top: 280px;
-        right: -100px;
+        top: 290px;
+        right: -50px;
     }
     .symbol7 {
-        bottom: 120px;
-        left: -100px;
+        bottom: 290px;
+        left: -50px;
     }
     .symbol8 {
-        bottom: -50px;
-        left: 50px;
+        bottom: -20px;
+        left: 20px;
     }
     .symbol9 {
-        bottom: -100px;
+        right: 20px;
+        bottom: -70px;
+    }
+
+    .bio-text-container {
+        margin: 0px;
+    }
+    #img-1 {
+        width: 300px;
+        right: -120px;
+    }
+    #img-2 {
+        width: 300px;
+        left: -110px;
+        top: 200px;
+    }
+    #img-3 {
+        width: 300px;
+        top: 370px;
+        right: -120px;
     }
 
     #google-img {
