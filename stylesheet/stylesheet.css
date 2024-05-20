@@ -861,4 +861,31 @@ footer p {
         left: 130px;
         width: 20px;
     }
+
+    /* contact section */
+    .contact-page {
+        height: 59rem;
+    }
+    .text-block-container {
+        height: 18rem;
+    }
+    .text-block-container h2 {
+        margin-top: 7px;
+    }
+    .text-block-container p {
+        width: 80%;
+    }
+    .form-block-container {
+        flex-direction: column;
+        height: 29rem;
+    }
+    .contact-form h2 {
+        font-size: 2.5rem;
+    }
+    .bt {
+        font-size: 1rem;
+    }
+    .our-ecosystem h2 {
+        font-size: 1.7rem;
+    }
 }
