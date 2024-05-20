@@ -344,7 +344,6 @@ body {
     margin-top: 3rem;
     position: relative;
     gap: 3rem;
-    /* text-decoration: none; */
 }
 
 .card-size {
@@ -657,67 +656,62 @@ footer p {
                     /* Media Queries */
 
 @media (max-width: 1024px) {
+    /* about company */
     .short-bio {
         height: 55rem;
     }
-
     #img-1 {
         width: 300px;
     }
-
     #img-2 {
         width: 300px;
     }
-
     #img-3 {
         width: 200px;
         top: 250px;
     }
 
+    /* companies */
     .card-size {
         height: 280px;
         width: 200px;
     }
-
     .card-logo {
         width: 130px;
     }
-
     .card-text {
         padding-top: 0px;
         font-size: 0.9rem;
     }
-
     .go-text1 {
         padding-top: 20px;
     }
-    
     .go-text2 {
         padding-top: 38px;
     }
-    
     .go-text3 {
         padding-top: 18px;
     }
-
     .arrow {
         opacity: 1;
     }
 
+    /* office location */
     #google-img {
         width: 700px;
     }
-
     #locationpin {
         top: 150px;
         left: 333px;
         width: 20px;
     }
 
+    /* contact section */
     .form-block-container {
         gap: 4rem;
     }
 
+    /* landing, about section bg */
     .symbol1 {
         top: -50px;
         left: -90px;
@@ -757,6 +751,7 @@ footer p {
 
 
 @media (max-width: 480px) {
+    /* landing page */
     .landing-page{
         height: 26rem;
     }
@@ -802,7 +797,8 @@ footer p {
         right: 20px;
         bottom: -70px;
     }
-
+    
+    /* about company */
     .bio-text-container {
         margin: 0px;
     }
@@ -821,12 +817,48 @@ footer p {
         right: -120px;
     }
 
+    /* companies */
+    .companies {
+        height: 58rem;
+    }
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-size {
+        height: 170px;
+        width: 260px;
+        padding: 1rem;
+    }
+    .card-logo {
+        padding-top: 10px;
+        padding-left: 65px;
+    }
+    .gobt {
+        margin: 0px;
+        padding: 0px;
+        padding-left: 80px;
+    }
+
+    /* office location */
+    .maps-location {
+        height: 45rem;
+    }
+    .google-maps-container {
+        margin: 10px;
+        align-items: center;
+        overflow: hidden;
+    }
     #google-img {
-        width: 200px;
+        width: 500px;
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
     #locationpin {
-        top: 150px;
-        left: 333px;
+        top: 100px;
+        left: 130px;
         width: 20px;
     }
 }
