@@ -16,7 +16,7 @@
 <body>
 
     <!-- Navigation bar -->
-    <nav class="navigation-bar" id="navbar">
+    <!-- <nav class="navigation-bar" id="navbar">
         <div class="left-side">
             <a href="#home"><img src="./assets/green-das-logo.svg" alt="DAS Logo" height="30px" id="nav-logo"></a>
             <a href="#home" id="nav-company-name">Digital Asset Studios</a>
@@ -30,7 +30,33 @@
                 <a href="#contact"><li>Contact Us</li></a>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+
+    <header class="navigation-bar" id="navbar">
+        <div class="left-side" id="brand">
+            <a href="#home"><img src="./assets/green-das-logo.svg" alt="DAS Logo" height="30px" id="nav-logo"></a>
+            <a href="#home" id="nav-company-name">Digital Asset Studios</a>
+        </div>
+        <nav class="right-side">
+            <ul class="nav-list">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#partners">Our Partners</a></li>
+                <li><a href="#location">Our Location</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#partners">Our Partners</a></li>
+                <li><a href="#location">Our Location</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
 
     <!-- Landing Page -->
     <section id="home" class="landing-page">
@@ -257,25 +283,9 @@
 
 
         // Mobile Icon script:
-
-
-
-        // // Randomize rotation direction and angle for each symbol
-        // symbols.forEach(symbol => {
-        //     const currentAnimation = symbol.style.animationName;
-        //     symbol.style.animationName = "none";
-
-        //     // Adjust the rotation angle to align with CSS animation steps
-        //     const randomStep = Math.floor(Math.random() * 4); // Randomly select one of the four steps
-        //     const rotationAngle = randomStep * 90;
-            
-        //     // Apply rotation and translation defined in CSS animation
-        //     symbol.style.transform = `rotate(${rotationAngle}deg)`;
-
-        //     setTimeout(() => {
-        //         symbol.style.animationName = currentAnimation;
-        //     }, 100);
-        // });
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle("open");
+        }
 
     </script>
 </body>
