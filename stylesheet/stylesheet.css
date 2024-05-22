@@ -166,10 +166,26 @@ body {
 .mobile-menu {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 45px;
     left: 0px;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 45px);
     width: 100%;
+    background-color: var(--navy_color);
+    margin: 0;
+    list-style: none;
+    height: 250px;
+    padding-top: 40px;
+    padding-left: 0px;
+    text-decoration: none;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 8px 20px 8px 0px;
+    font-size: 2rem;
+    text-align: center;
 }
 
 
@@ -797,6 +813,12 @@ footer p {
 
 @media (max-width: 480px) {
     /* Navigation */
+    .navigation-bar {
+        justify-content: center;
+    }
+    .left-side {
+        padding-right: 35px;
+    }
     .right-side {
         display: none;
     }
@@ -835,11 +857,11 @@ footer p {
         right: 0px;
     }
     .symbol6 {
-        top: 290px;
-        right: -50px;
+        top: 320px;
+        right: 10px;
     }
     .symbol7 {
-        bottom: 290px;
+        bottom: 250px;
         left: -50px;
     }
     .symbol8 {
