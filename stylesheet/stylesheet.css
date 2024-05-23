@@ -563,15 +563,39 @@ body {
                     /* Contact Section Style */
 .contact-page {
     background-color: var(--navy_color);
-    height: 50rem;
+    /* height: 50rem; */
+    height: 30rem;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
+
+/* Card Style */
+.form-block-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    z-index: 1;
+}
+.card-design {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 20px 0px;
+}
 .text-block-container {
+    color: black;
+    text-align: center;
+}
+/* end */
+
+
+/* .text-block-container {
     background-color: white;
     color: black;
     width: 70%;
@@ -584,7 +608,7 @@ body {
     padding: 20px 0px;
     margin-bottom: 20px;
 }
-
+*/
 .text-block-container h2 {
     color: var(--green);
     font-size: 2rem;
@@ -594,7 +618,7 @@ body {
 .text-block-container p {
     width: 70%;
 }
-
+/*
 .form-block-container {
     background-color: white;
     margin-top: 20px;
@@ -609,12 +633,13 @@ body {
 
 .contact-form {
     text-align: center;
-}
+} */
 
 .contact-form h2 {
     color: var(--green);
-    font-size: 4rem;
-    margin-top: 0px;
+    /* font-size: 4rem; */
+    font-size: 2rem;
+    /* margin-top: 0px; */
 }
 
 .contact-button {
@@ -678,14 +703,15 @@ body {
     d: path("M0,0 C30,10 70,10 100,0 C95,30 95,70 100,100 C70,90 30,90 0,100 C5,70 5,30 0,0");
 }
 
-.our-ecosystem {
+/* .our-ecosystem {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 .our-ecosystem h2 {
-    color: var(--dark_blue);
+    /* color: var(--dark_blue); */
+    color: var(--green);
     font-size: 2rem;
 }
 
@@ -942,7 +968,8 @@ footer p {
 
     /* contact section */
     .contact-page {
-        height: 59rem;
+        /* height: 59rem; */
+        height: 63rem;
     }
     .text-block-container {
         height: 18rem;
@@ -955,8 +982,16 @@ footer p {
     }
     .form-block-container {
         flex-direction: column;
+        /* card style */
+        align-items: center;
+        /* end */
         height: 29rem;
     }
+    /* card style */
+    .card-design {
+        width: 70%;
+    }
+    /* end */
     .contact-form h2 {
         font-size: 2.5rem;
     }
