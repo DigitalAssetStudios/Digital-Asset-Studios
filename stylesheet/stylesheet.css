@@ -587,6 +587,7 @@ body {
     align-items: center;
     width: 30%;
     padding: 20px 0px;
+    border-radius: 8px;
 }
 .text-block-container {
     color: black;
