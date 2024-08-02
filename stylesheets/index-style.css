@@ -22,6 +22,7 @@ body {
     color: var(--white-color);
     background-color: var(--navy_color);
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 .section {
     height: 100vh;
@@ -46,6 +47,7 @@ body {
 }
 .nav-bar-logo {
     height: 40px;
+    padding: 0 65px 0 0;
 }
 .nav-menu {
     list-style: none;
@@ -109,7 +111,7 @@ body {
     position: relative;
     width: 130vw;
     height: 40vh;
-    filter: blur(80px);
+    filter: blur(120px);
 }
 .parallax > use {
     animation: move-forever 50s cubic-bezier(.55,.5,.45,.5)     infinite;

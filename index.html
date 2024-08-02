@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/green-das-logo.svg">
     <title>Digital Asset Studios</title>
 </head>
 <body>
@@ -41,9 +42,9 @@
                     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
                 </defs>
                 <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(1, 195, 141, 0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(1, 195, 141, 0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(1, 195, 141, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(1, 195, 141, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(1, 195, 141, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(1, 195, 141, 0.7)" />
                     <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(1, 195, 141, 1)" />
                 </g>
             </svg>
@@ -76,8 +77,20 @@
 
 
     <script>
-
-
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get the target section
+            const target = document.querySelector(this.getAttribute('href'));
+            
+            // Custom scroll effect
+            window.scroll({
+            top: target.offsetTop,
+            behavior: 'smooth'
+            });
+        });
+        });
     </script>
 
 
