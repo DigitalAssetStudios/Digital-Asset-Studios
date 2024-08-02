@@ -21,46 +21,64 @@ body {
     font-family: var(--sup-font);
     color: var(--white-color);
     background-color: var(--navy_color);
+    box-sizing: border-box;
 }
 .section {
     height: 100vh;
     width: 100%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 
 
     /* Navigation bar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    z-index: 5;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 15;
 }
-.navbar .logo {
-    max-height: 30px;
+.nav-bar-logo {
+    height: 40px;
 }
-.navbar .menu {
+.nav-menu {
+    list-style: none;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 2px solid var(--white-color);
+    border-radius: 10px;
+    backdrop-filter: blur(3rem);
 }
-.navbar .menu a {
+.nav-menu li {
+    margin: 0 15px;
+}
+.nav-menu a {
     color: var(--white-color);
     text-decoration: none;
     font-size: 16px;
 }
-.navbar .apply-btn {
+.nav-menu a:hover{
+    color: var(--green_color);
+}
+.nav-bt {
+    padding: 10px 20px;
     background-color: var(--green_color);
     color: var(--white-color);
     border: none;
-    padding: 10px 20px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
 }
+
+
+
 
 
 
@@ -73,9 +91,10 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
+    overflow: hidden;
 }
 .landing-content {
-    margin-top: 60px;
+    margin-top: 30vh;
 }
 .page-title {
     width: 60vw;
@@ -88,9 +107,8 @@ body {
 }
 .waves {
     position: relative;
-    width: 100vw;
-    height: 45vh;
-    margin-bottom: -161px;
+    width: 130vw;
+    height: 40vh;
     filter: blur(80px);
 }
 .parallax > use {
@@ -152,7 +170,7 @@ body {
 .top-border-layout {
     top: 0;
     position: fixed;
-    z-index: 7;
+    z-index: 10;
     left: 0;
     right: 0;
     height: 80%;
@@ -174,7 +192,7 @@ body {
 .bot-border-layout {
     bottom: 0;
     position: fixed;
-    z-index: 7;
+    z-index: 10;
     left: 0;
     right: 0;
     height: 80%;
