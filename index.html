@@ -12,10 +12,10 @@
 </head>
 <body>
     
-
         <!-- border layout -->
     <div class="top-border-layout"></div>
     <div class="bot-border-layout"></div>
+
 
 
         <!-- Navigation bar -->
@@ -32,6 +32,14 @@
             <button class="nav-bt">Apply Now</button>
         </div>
     </nav>
+
+        <!-- page indicator nav bar -->
+    <nav class="page-indicator">
+        <div class="indicator-nav-wrapper">
+
+        </div>
+    </nav>
+
 
 
         <!-- Landing section of the Page -->
@@ -57,6 +65,7 @@
     </div>
 
 
+
         <!-- Who We Are section -->
     <div class="who-we-are-section section">
         <div class="wwa-text-content">
@@ -77,9 +86,17 @@
     </div>
     
 
-        <!-- Services section of the page -->
-    <div class="services-section section">
 
+        <!-- What We Offer section -->
+    <div class="what-we-offer-section section">
+        <div class="wwo-text-content">
+            <h2 class="wwo-title">Start <span class="highlight">Your</span> Journey</h2>
+        </div>
+        <div class="wwo-card-content">
+            <div class="card card1">
+
+            </div>
+        </div>
     </div>
 
 
@@ -111,14 +128,36 @@
 
 
             // scroll animation controller
-        document.addEventListener('scroll', function() {
-            const section = document.querySelector('.who-we-are-section');
-            if (window.scrollY + window.innerHeight > section.offsetTop && window.scrollY < section.offsetTop + section.offsetHeight) {
-                section.classList.add('scrolled');
-            } else {
-                section.classList.remove('scrolled');
-            }
-        });
+        // document.addEventListener('scroll', () => {
+        //     const wwaSection = document.querySelector('.who-we-are-section');
+        //     const images = document.querySelectorAll('.wwa-animation img');
+        //     const sectionHeight = wwaSection.offsetHeight;
+        //     const scrollY = window.scrollY;
+        //     const sectionTop = wwaSection.offsetTop;
+        //     const sectionBottom = sectionTop + sectionHeight;
+
+        //     // Define starting and ending positions for each image
+        //     const positions = [
+        //         { startX: -50, startY: 0, endX: 50, endY: 100 },
+        //         { startX: 10, startY: 20, endX: 60, endY: 120 },
+        //         { startX: 20, startY: 40, endX: 70, endY: 140 },
+        //         { startX: 30, startY: 60, endX: 80, endY: 160 },
+        //         { startX: 40, startY: 80, endX: 90, endY: 180 },
+        //         { startX: 50, startY: 100, endX: 100, endY: 200 }
+        //     ];
+
+        //     if (scrollY >= sectionTop && scrollY <= sectionBottom) {
+        //         const scrollPosition = scrollY - sectionTop;
+        //         const scrollPercentage = scrollPosition / sectionHeight;
+
+        //         images.forEach((img, index) => {
+        //             const pos = positions[index];
+        //             const moveX = pos.startX + (pos.endX - pos.startX) * scrollPercentage;
+        //             const moveY = pos.startY + (pos.endY - pos.startY) * scrollPercentage;
+        //             img.style.transform = `translate(${moveX}%, ${moveY}%)`;
+        //         });
+        //     }
+        // });
 
 
     </script>
