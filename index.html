@@ -13,6 +13,11 @@
 <body>
     
 
+        <!-- border layout -->
+    <div class="top-border-layout"></div>
+    <div class="bot-border-layout"></div>
+
+
         <!-- Navigation bar -->
     <nav class="navbar">
         <div class="logo">
@@ -52,9 +57,15 @@
     </div>
 
 
-        <!-- Who We Are section of the page -->
+        <!-- Who We Are section -->
     <div class="who-we-are-section section">
-
+        <div class="wwa-text-content">
+            <h2 class="wwa-title">Who <span class="highlight">We</span> Are</h2>
+            <p class="wwa-paragraph">A Web3 focused incubator dedicated to nurturing startups, anywhere between ideation and those that have raised under $3 milion.<br><br>
+                We embrace a build till success methodology with a cross-niche approach, drawing valuable insights across sectors such as DeFi, SocialFi, SportsFi, ConsumerFi, RWAs, and beyond.<br><br>
+                Our core speciality lies in financial engineering and commercialization, ensuring that startups are equipped with the tools and strategies for sustainable growth and success in the evolving Web3 landscape.
+            </p>
+        </div>
     </div>
     
 
@@ -71,26 +82,29 @@
     </div>
 
 
-        <!-- border layout -->
-    <div class="top-border-layout"></div>
-    <div class="bot-border-layout"></div>
-
 
     <script>
+
+            // heavy scrolling effect:
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Get the target section
-            const target = document.querySelector(this.getAttribute('href'));
-            
-            // Custom scroll effect
-            window.scroll({
-            top: target.offsetTop,
-            behavior: 'smooth'
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Get the target section
+                const target = document.querySelector(this.getAttribute('href'));
+                
+                // Custom scroll effect
+                window.scroll({
+                top: target.offsetTop,
+                behavior: 'smooth'
+                });
             });
         });
-        });
+
+
+            // fade out element as you scroll:
+
+
     </script>
 
 
