@@ -243,6 +243,7 @@ body {
     /* What We Offer section */
 .what-we-offer-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -250,7 +251,22 @@ body {
     font-size: 4vw;
     margin: 0 0 10px 0;
 }
-
+.wwo-card-content {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    width: 60%;
+}
+.card {
+    padding: 10px 20px;
+    border: 2px solid var(--white-color);
+    border-radius: 10px;
+    backdrop-filter: blur(3rem);
+}
+.card1 {
+    
+}
 
 
 
