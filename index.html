@@ -66,6 +66,14 @@
                 Our core speciality lies in financial engineering and commercialization, ensuring that startups are equipped with the tools and strategies for sustainable growth and success in the evolving Web3 landscape.
             </p>
         </div>
+        <div class="wwa-animation">
+            <img src="./assets/shape.png" alt="green-shape" class="shape-1">
+            <img src="./assets/shape.png" alt="green-shape" class="shape-2">
+            <img src="./assets/shape.png" alt="green-shape" class="shape-3">
+            <img src="./assets/shape.png" alt="green-shape" class="shape-4">
+            <img src="./assets/shape.png" alt="green-shape" class="shape-5">
+            <img src="./assets/shape.png" alt="green-shape" class="shape-6">
+        </div>
     </div>
     
 
@@ -102,7 +110,15 @@
         });
 
 
-            // fade out element as you scroll:
+            // scroll animation controller
+        document.addEventListener('scroll', function() {
+            const section = document.querySelector('.who-we-are-section');
+            if (window.scrollY + window.innerHeight > section.offsetTop && window.scrollY < section.offsetTop + section.offsetHeight) {
+                section.classList.add('scrolled');
+            } else {
+                section.classList.remove('scrolled');
+            }
+        });
 
 
     </script>

@@ -196,24 +196,88 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
 }
 .wwa-text-content {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 50%;
+    z-index: 1;
 }
 .wwa-title {
     font-size: 4vw;
     margin: 0 0 10px 0;
 }
 .wwa-paragraph {
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     margin: 10px 0 0 0;
 }
+.wwa-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+.wwa-animation img {
+    position: absolute;
+    transition: transform 0.5s linear;
+}
+/* Individual positions for each image */
+.shape-1 {
+    left: -2%;
+    bottom: -2%;
+    width: 7vw;
+}
+.shape-2 {
+    left: -20%;
+    bottom: -40%;
+    width: 25vw;
+}
+.shape-3 {
+    left: -10%;
+    bottom: -25%;
+    width: 12vw;
+}
+.shape-4 {
+    right: -6%;
+    bottom: -10%;
+    width: 8vw;
+}
+.shape-5 {
+    right: -12%;
+    bottom: -20%;
+    width: 14vw;
+}
+.shape-6 {
+    right: -25%;
+    bottom: -70%;
+    width: 26vw;
+}
 
-
-
+/* Example animation for scroll */
+.who-we-are-section.scrolled .wwa-animation .shape-1 {
+    transform: translate(270%, -200%);
+}
+.who-we-are-section.scrolled .wwa-animation .shape-2 {
+    transform: translate(40%, -60%);
+}
+.who-we-are-section.scrolled .wwa-animation .shape-3 {
+    transform: translate(200%, -80%);
+}
+.who-we-are-section.scrolled .wwa-animation .shape-4 {
+    transform: translate(-260%, -160%);
+}
+.who-we-are-section.scrolled .wwa-animation .shape-5 {
+    transform: translate(-90%, -70%);
+}
+.who-we-are-section.scrolled .wwa-animation .shape-6 {
+    transform: translate(-120%, -55%);
+}
 
 
 
@@ -226,7 +290,6 @@ body {
 .contact-us-section {
     background-color: blueviolet;
 }
-
 
 
 
