@@ -301,11 +301,15 @@ body {
     font-size: 4vw;
     margin: 0 0 10px 0;
 }
+.social-media-links {
+    display: flex;
+    gap: 10px;
+}
 .linkedin {
-    width: 1vw;
+    width: 1.5vw;
 }
 .twitter {
-    width: 1vw;
+    width: 1.5vw;
 }
 .ContactForm_root {
     display: flex;
@@ -313,7 +317,8 @@ body {
     align-items: center;
 }
 
-.ContactForm_formContent {
+
+/* .ContactForm_formContent {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -387,7 +392,7 @@ body {
 
 .Icon_arrow {
     margin-left: 10px;
-}
+} */
 
 
 
