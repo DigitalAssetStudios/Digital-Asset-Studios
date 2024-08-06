@@ -290,14 +290,16 @@ body {
 
 
 
-
-
-
-
-
-
+    /* Contact us section */
 .contact-us-section {
-    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cu-title {
+    font-size: 4vw;
+    margin: 0 0 10px 0;
 }
 
 
