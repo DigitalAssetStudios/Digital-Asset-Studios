@@ -118,12 +118,51 @@
             <h2 class="cu-title">Send <span class="highlight">Us</span> Memes</h2>
         </div>
         <div class="social-media-links">
-            <div class="linkedIn"><img src="" alt=""></div>
-            <div class="twitter"><img src="" alt=""></div>
+            <div><img src="./assets/linkedin-icon.png" alt="LinkedIn" class="linkedin"></div>
+            <div><img src="./assets/twitter-icon.png" alt="Twitter" class="twitter"></div>
         </div>
         <div class="bottom-container">
             <div class="form-content">
-
+                <form novalidate class="ContactForm_root">
+                    <div class="ContactForm_formContent" style="opacity: 1; transform: translateY(0px);">
+                        <label class="Input_root" style="opacity: 1; transform: translateY(0%);">
+                            <input class="Input_input" placeholder=" " name="name" type="text" required>
+                            <span class="Input_placeholder">your name</span>
+                            <div class="Input_border"></div>
+                        </label>
+                        <label class="Input_root" style="opacity: 1; transform: translateY(0%);">
+                            <input class="Input_input" placeholder=" " name="company" type="text">
+                            <span class="Input_placeholder">Company</span>
+                            <div class="Input_border"></div>
+                        </label>
+                        <label class="Input_root" style="opacity: 1; transform: translateY(0%);">
+                            <input class="Input_input" placeholder=" " name="email" type="email" required>
+                            <span class="Input_placeholder">Email</span>
+                            <div class="Input_border"></div>
+                        </label>
+                        <div class="Input_root Input_optionsRoot" style="opacity: 1; transform: translateY(0%);">
+                            <span class="Input_placeholder">estimate budget</span>
+                            <div class="Input_options">
+                                <label><input class="Input_input" name="estimate" type="radio" value="30k $"><span>30k $</span></label>
+                                <label><input class="Input_input" name="estimate" type="radio" value="50k $"><span>50k $</span></label>
+                                <label><input class="Input_input" name="estimate" type="radio" value="100k $"><span>100k $</span></label>
+                            </div>
+                        </div>
+                        <label class="Input_root" style="opacity: 1; transform: translateY(0%);">
+                            <textarea class="Input_input" placeholder=" " name="message" required></textarea>
+                            <span class="Input_placeholder">Message</span>
+                            <div class="Input_border"></div>
+                        </label>
+                    </div>
+                    <button class="Button_root" type="submit" style="opacity: 1;">
+                        <span>send</span>
+                        <div class="Icon_arrow">
+                            <svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8298 2.89844L38.9577 18.5118C40.0849 19.6752 40.0849 21.5235 38.9577 22.6869L23.8299 38.3004L19.5207 34.1253L29.7193 23.5994L0 23.5994V17.5994L29.7192 17.5994L19.5207 7.07355L23.8298 2.89844Z" fill="white"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </form>
             </div>
             <div></div>
         </div>
