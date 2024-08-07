@@ -118,40 +118,32 @@
             <h2 class="cu-title">Send <span class="highlight">Us</span> Memes</h2>
         </div>
         <div class="social-media-links">
-            <div><img src="./assets/linkedin-icon.png" alt="LinkedIn" class="linkedin"></div>
+            <a href="https://www.linkedin.com/company/103269405/admin/dashboard/" target="_blank"><img src="./assets/linkedin-icon.png" alt="LinkedIn" class="linkedin"></a>
             <div><img src="./assets/twitter-icon.png" alt="Twitter" class="twitter"></div>
         </div>
         <div class="bottom-container">
-            <div class="form-content">
-                <form novalidate class="ContactForm_root">
-                    <div class="ContactForm_formContent">
-                        <label class="Input_root">
-                            <input class="Input_input" placeholder="First Name" name="name" type="text" required>
-                            <div class="Input_border"></div>
-                        </label>
-                        <label class="Input_root">
-                            <input class="Input_input" placeholder="Last Name" name="company" type="text">
-                            <div class="Input_border"></div>
-                        </label>
-                        <label class="Input_root">
-                            <input class="Input_input" placeholder="Email" name="email" type="email" required>
-                            <div class="Input_border"></div>
-                        </label>
-                        <label class="Input_root">
-                            <input class="Input_input" placeholder="Subject" name="email" type="email" required>
-                            <div class="Input_border"></div>
-                        </label>
-                        <label class="Input_root">
-                            <textarea class="Input_input" placeholder="Message" name="message" required></textarea>
-                            <div class="Input_border"></div>
-                        </label>
-                    </div>
-                    <button class="Button_root" type="submit" style="opacity: 1;">
-                        <span>send</span>
-                    </button>
-                </form>
-            </div>
-            <div></div>
+            <form novalidate class="form-content">
+                <div class="form">
+                    <label class="half-block block">
+                        <input class="input-area" type="text" placeholder="First Name" required>
+                    </label>
+                    <label class="half-block block">
+                        <input class="input-area" type="text" placeholder="Last Name" required>
+                    </label>
+                    <Label class="full-block block">
+                        <input class="input-area" type="text" placeholder="Email" required>
+                    </Label>
+                    <label class="full-block block">
+                        <input class="input-area" type="text" placeholder="Subject" required>
+                    </label>
+                    <label  class="full-block block">
+                        <textarea  class="input-area" name="message" placeholder="Message" rows="4" required></textarea>
+                    </label>
+                </div>
+                <button class="send-button">
+                    <span class="bt-text">SEND</span>
+                </button>
+            </form>
         </div>
     </div>
 
