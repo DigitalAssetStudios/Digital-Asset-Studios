@@ -126,6 +126,9 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+.nav-bt:hover {
+    box-shadow: 0 calc(6 / var(--gfs)* 100vw) calc(20 / var(--gfs)* 100vw) calc(4 / var(--gfs)* 100vw) rgba(1, 195, 141, .75);
+}
 
 
 
@@ -378,7 +381,7 @@ body {
 }
 .send-button:hover {
     background: linear-gradient(129deg, var(--green_color), var(--blue-white));
-    box-shadow: 0 calc(8 / var(--gfs)* 100vw) calc(48 / var(--gfs)* 100vw) calc(4 / var(--gfs)* 100vw) rgba(1, 195, 141, .75), inset max(1px, calc(1 / var(--gfs)* 100vw)) max(1px, calc(1 / var(--gfs)* 100vw)) max(1px, calc(1 / var(--gfs)* 100vw)) 0 hsla(0, 0%, 100%, .12);
+    box-shadow: 0 calc(8 / var(--gfs)* 100vw) calc(48 / var(--gfs)* 100vw) calc(4 / var(--gfs)* 100vw) rgba(1, 195, 141, .75);
 }
 
 
