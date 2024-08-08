@@ -265,10 +265,68 @@ body {
 }
 .wwa-animation img {
     position: absolute;
-    transition: transform 0.9s linear;
+    animation-timing-function: linear;
+    transform-origin: center;
 }
 .shape-1 {
     width: 13vw;
+    top: 70vh;
+    left: 15vw;
+    animation: rotateShape1 15s infinite linear;
+}
+.shape-2 {
+    width: 20vw;
+    top: 70vh;
+    left: -5vw;
+    animation: rotateShape2 17s infinite linear reverse;
+}
+.shape-3 {
+    width: 5vw;
+    top: 60vh;
+    left: 10vw;
+    animation: rotateShape3 14s infinite linear;
+}
+.shape-4 {
+    width: 15vw;
+    top: 60vh;
+    right: 15vw;
+    animation: rotateShape4 16s infinite linear reverse;
+}
+.shape-5 {
+    width: 23vw;
+    top: 65vh;
+    right: -5vw;
+    animation: rotateShape5 18s infinite linear;
+}
+.shape-6 {
+    width: 7vw;
+    top: 50vh;
+    right: 17vw;
+    animation: rotateShape6 13s infinite linear reverse;
+}
+@keyframes rotateShape1 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes rotateShape2 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes rotateShape3 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+@keyframes rotateShape4 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+@keyframes rotateShape5 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+@keyframes rotateShape6 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 .card-title {
     font-size: 2vw;
