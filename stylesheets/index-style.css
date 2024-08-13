@@ -218,3 +218,13 @@ body {
     justify-content: center;
     align-items: center;
 }
+.wwa-content {
+    text-align: center;
+}
+.wwa-par-animated {
+    width: 70%;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    animation: an 1s ease-out 1 both;
+}
