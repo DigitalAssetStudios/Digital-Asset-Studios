@@ -486,10 +486,12 @@ body {
     border-radius: 30px;
     backdrop-filter: blur(3.7rem);
     background-color: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
     transition: all 0.3s ease-out;
 }
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
+    box-shadow: 0 10px 2px var(--white-color), 0 10px 2px var(--blue-white);
 }
 .coworking-card {
     grid-column: 2;
@@ -503,6 +505,10 @@ body {
     text-decoration: none;
     color: var(--white-color);
     cursor: none;
+    transition: all 0.3s ease-out;
+}
+.card:hover .service-card-conent {
+    color: var(--navy_color);
 }
 .button-card-conent {
     text-decoration: none;
@@ -511,4 +517,24 @@ body {
 }
 .card-title {
     font-size: 2vw;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: var(--green_color); /* Hover background color */
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0;
+    z-index: -1;
+}
+.card:hover::before {
+    width: 200%;
+    height: 200%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
