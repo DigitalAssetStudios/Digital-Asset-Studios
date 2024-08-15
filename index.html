@@ -166,13 +166,22 @@
                 scale: 4,
                 duration: 0.3
             });
+            gsap.to($smallShape, {
+                scale: 4,
+                duration: 0.3
+            });
         }
         function onMouseHoverOut() {
             gsap.to($bigShape, {
                 scale: 1,
                 duration: 0.3
             });
+            gsap.to($smallShape, {
+                scale: 1,
+                duration: 0.3
+            });
         }
+
 
         // Hover an element to make the cursor smaller
         function onMouseShrink() {
