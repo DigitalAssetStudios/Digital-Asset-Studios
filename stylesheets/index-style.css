@@ -498,8 +498,13 @@ body {
     grid-row: 1 / span 2;
 }
 .bt-card {
-    border: 0.1px solid var(--green_color);
     border-radius: 30px;
+    background-color: var(--green_color);
+    transition: all 0.3s ease-out;
+}
+.bt-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 2px rgba(0, 154, 111, 1), 0 10px 2px rgba(0, 154, 111, 1);
 }
 .service-card-conent {
     text-decoration: none;
@@ -517,6 +522,9 @@ body {
 }
 .card-title {
     font-size: 2vw;
+}
+.bt-card:hover .os-button-title {
+    color: var(--navy_color);
 }
 .card::before {
     content: '';
