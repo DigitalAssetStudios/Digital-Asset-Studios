@@ -643,6 +643,7 @@ body {
 }
 .social-media-icon {
     width: 30px;
+    cursor: none;
 }
 .cu-down-content {
     height: 58%;
