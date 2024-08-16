@@ -48,7 +48,7 @@ body {
     top: 0;
     left: 0;
     z-index: 8;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 }
 .cursor-shape {
     position: absolute;
@@ -720,12 +720,67 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--white-color);
+    background-image: linear-gradient(-30deg, var(--green_color), var(--white-color));
     border-radius: 20px;
     height: 100%;
     width: 100%;
+    position: relative;
+    z-index: 0;
 }
 .form-bt-text {
-    padding: 200px;
-    font-size: 2.5vw;
+    padding: 0px 150px;
+    font-size: 6vw;
+    font-family: var(--main-font);
+    color: var(--navy_color);
+}
+.glow-on-hover {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-image: linear-gradient(-30deg, var(--white-color), var(--green_color));
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, var(--green_color), var(--white-color), var(--green_color), var(--white-color), var(--green_color), var(--white-color), var(--green_color), var(--white-color), var(--green_color));
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 20px;
+}
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-30deg, var(--green_color), var(--white-color));
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
