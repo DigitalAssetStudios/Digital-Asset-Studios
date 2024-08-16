@@ -679,7 +679,7 @@ body {
 .input {
     background-color: var(--blue-white);
     border-radius: 10px;
-    border: 0;
+    border: 1px solid var(--green_color);
     box-sizing: border-box;
     color: var(--green_color);
     outline: 0;
