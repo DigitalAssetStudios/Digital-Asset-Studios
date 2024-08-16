@@ -441,6 +441,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: var(--navy_color); */
 }
 .wwa-content {
     text-align: center;
@@ -459,15 +460,19 @@ body {
 
 /* Our Service Section */
 .our-service-section {
+    position: relative;
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .service-content {
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 .service-title {
     font-size: 5vw;
@@ -546,6 +551,56 @@ body {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
+.bg-shape-container {
+    position: fixed;
+    top: -470%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+.strip-overlay-blur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+	width: 100%;
+    filter: blur(20px);
+}
+.strip-shape-one, .strip-shape-two {
+    background-color: var(--green_color);
+    rotate: -5deg;
+    /* clip-path: polygon(44% 21%, 71% 27%, 100% 16%, 100% 52%, 74% 50%, 48% 65%, 23% 62%, 0% 70%, 0% 35%, 20% 34%); */
+}
+.strip-shape-one {
+    height: 100px;
+    width: 140%;
+    animation: moveClipShapeOne 10s infinite alternate ease-in-out;
+}
+.strip-shape-two {
+    height: 200px;
+    width: 130%;
+    animation: moveClipShapeTwo 10s infinite alternate ease-in-out;
+}
+@keyframes moveClipShapeOne {
+    0%, 100% {
+        clip-path: polygon(44% 21%, 51% 27%, 100% 16%, 100% 52%, 74% 50%, 48% 65%, 23% 62%, 0% 70%, 0% 35%, 20% 34%);
+    }
+    50% {
+        clip-path: polygon(34% 0%, 51% -10%, 100% 16%, 100% 52%, 54% 30%, 48% 65%, 23% 92%, 0% 80%, 0% 35%, 20% 44%);
+    }
+}
+@keyframes moveClipShapeTwo {
+    0%, 100% {
+        clip-path: polygon(44% 21%, 71% 27%, 100% 16%, 100% 52%, 74% 50%, 48% 65%, 23% 62%, 0% 70%, 0% 35%, 20% 34%);
+    }
+    50% {
+        clip-path: polygon(44% 31%, 71% 7%, 100% 16%, 100% 52%, 74% 80%, 48% 55%, 23% 82%, 0% 70%, 0% 35%, 20% 34%);
+    }
+}
 
 
 
@@ -557,6 +612,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: var(--navy_color); */
 }
 .cu-upper-content {
     height: 50%;

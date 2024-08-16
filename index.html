@@ -126,6 +126,12 @@
                     </div>
                 </div>
             </div>
+            <div class="bg-shape-container">
+                <div class="strip-overlay-blur">
+                    <div class="strip-shape-one"></div>
+                    <div class="strip-shape-two"></div>
+                </div>
+            </div>
         </div>
 
 
@@ -297,6 +303,18 @@
                 });
             }, 3100); // Delay of 2000ms before starting the animation
         });
+
+
+
+        // background scrolling speed:
+        document.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            const background = document.querySelector('.bg-shape-container');
+            const parallaxSpeed = 2;
+
+            background.style.transform = `translate(-50%, ${scrollPosition * parallaxSpeed}px)`;
+        });
+
     </script>
 
 
