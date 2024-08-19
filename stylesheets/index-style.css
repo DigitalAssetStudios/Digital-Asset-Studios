@@ -560,7 +560,7 @@ body {
 }
 .bg-shape-container {
     position: fixed;
-    top: -470%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, 0%);
     height: 100vh;
