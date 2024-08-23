@@ -152,6 +152,11 @@ body {
 
 
 
+/* page indicator nav bar */
+
+
+
+
 /* Main body container style */
 .main-body-container {
     position: relative;
@@ -185,6 +190,7 @@ body {
     background-clip: text;
     color: transparent;
     font-size: 6vw;
+    margin: 10px 0 0 0;
     font-family: var(--main-font);
     animation: reveal 3000ms ease-in-out forwards 0ms, glow 2500ms linear 2000ms;
 }
@@ -209,6 +215,17 @@ body {
 .page-das-logo {
     width: 10vw;
     margin: 30px 0 0 0;
+    opacity: 0;
+    animation: fade 1000ms ease-in-out forwards;
+    animation-delay: 4s;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -458,10 +475,20 @@ body {
     font-size: 5vw;
     font-family: var(--main-font);
 }
-.wwa-par {
+
+#typing-paragraph {
+    font-family: var(--sup-font), sans-serif;
+    font-size: 1.7vw;
+    color: var(--white-color);
+    opacity: 0;
+    transition: opacity 500ms ease-in-out; /* Fade in the paragraph before typing starts */
+    line-height: 1.5em;
+}
+
+/* .wwa-par {
     font-size: 1.7vw;
     font-weight: 300;
-}
+} */
 
 
 
@@ -493,7 +520,10 @@ body {
     grid-gap: max(10px ,calc(10 / var(--messurments)* 100vw));
 }
 .card {
-    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
     border: 0.1px solid var(--green_color);
     border-radius: 30px;
     backdrop-filter: blur(3.7rem);
@@ -533,7 +563,12 @@ body {
     cursor: none;
 }
 .card-title {
-    font-size: 2vw;
+    font-size: 3vw;
+    margin: 80px 0 50px 0;
+}
+.card-par {
+    font-size: 1.4vw;
+    margin: 0 20px 80px 20px;
 }
 .bt-card:hover .os-button-title {
     color: var(--navy_color);
@@ -559,13 +594,11 @@ body {
     opacity: 1;
 }
 .bg-shape-container {
-    position: fixed;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    height: 100vh;
+    position: absolute;
+    top: 100px;
+    left: 0;
     width: 100%;
-    pointer-events: none;
+    height: 100%;
     z-index: -1;
 }
 .strip-overlay-blur {

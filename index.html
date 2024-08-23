@@ -49,6 +49,45 @@
 
 
 
+    <!-- page indicator nav bar -->
+    <nav class="page-indicator-nav">
+        <div class="mask-wrapper">
+            <div class="nav-mask">
+                <div class="nav-item-container">
+                    <button class="indi-nav-link">
+                        <div class="page-title-container">
+                            <div class="line"></div>
+                            <div class="page-name">Who We Are</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="nav-mask">
+                <div class="nav-item-container">
+                    <button class="indi-nav-link">
+                        <div class="page-title-container">
+                            <div class="line"></div>
+                            <div class="page-name">Start Your Journey</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="nav-mask">
+                <div class="nav-item-container">
+                    <button class="indi-nav-link">
+                        <div class="page-title-container">
+                            <div class="line"></div>
+                            <div class="page-name">Send Us Memes</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
     <!-- Main content of the body container -->
     <div class="body-content">
         <!-- landing section -->
@@ -83,14 +122,17 @@
 
 
         <!-- Who We Are section -->
-        <div class="who-we-are-section">
+        <div class="who-we-are-section" id="typing-container">
             <div class="wwa-content">
                 <div class="wwa-title">WHO <span class="highlight">WE</span> ARE</div>
-                <p class="wwa-par">
+
+                <p id="typing-paragraph"></p>
+
+                <!-- <p class="wwa-par">
                     A Web3 focused incubator dedicated to nurturing startups, anywhere between ideation and those that have raised under $3 milion.<br>
                     <br>We embrace a build till success methodology with a cross-niche approach, drawing valuable insights across sectors such as DeFi, SocialFi, SportsFi, ConsumerFi, RWAs, and beyond.<br>
                     <br>Our core speciality lies in financial engineering and commercialization, ensuring that startups are equipped with the tools and strategies for sustainable growth and success in the evolving Web3 landscape.
-                </p>
+                </p> -->
             </div>
         </div>
 
@@ -170,17 +212,17 @@
                 <form action="" class="contact-form">
                     <div class="form-content">
                         <div class="input-container">
-                            <input id="firstname" class="input" type="text" placeholder=" ">
+                            <input id="firstname" class="input" type="text" placeholder=" " required>
                             <div class="cut"></div>
                             <label for="firstname" class="placeholder">First Name</label>
                         </div>
                         <div class="input-container">
-                            <input id="lastname" class="input" type="text" placeholder=" ">
+                            <input id="lastname" class="input" type="text" placeholder=" " required>
                             <div class="cut"></div>
                             <label for="lastname" class="placeholder">Last Name</label>
                         </div>
                         <div class="input-container full-length">
-                            <input id="email" class="input" type="text" placeholder=" ">
+                            <input id="email" class="input" type="text" placeholder=" " required>
                             <div class="cut cut-short"></div>
                             <label for="firstname" class="placeholder">Email</label>
                         </div>
@@ -190,7 +232,7 @@
                             <label for="subject" class="placeholder">Subject</label>
                         </div>
                         <div class="input-container message-sizing">
-                            <input id="message" class="input" type="text" placeholder=" ">
+                            <input id="message" class="input" type="text" placeholder=" " required>
                             <div class="cut"></div>
                             <label for="message" class="placeholder">Message</label>
                         </div>
@@ -363,15 +405,57 @@
         });
 
 
+        // text type in effect:
+        document.addEventListener("DOMContentLoaded", function() {
+            var text = "A Web3 focused incubator dedicated to nurturing startups, anywhere<br>between ideation and those that have raised under $3 million.<br><br>" +
+                    "We embrace a build till success methodology with a cross-niche<br>approach, drawing valuable insights across sectors such as DeFi,<br>SocialFi, SportsFi, ConsumerFi, RWAs, and beyond.<br><br>" +
+                    "Our core specialty lies in financial engineering and commercialization,<br>ensuring that startups are equipped with the tools and strategies for<br>sustainable growth and success in the evolving Web3 landscape.";
+            
+            var paragraph = document.getElementById("typing-paragraph");
+            var speed = 20; // Speed of typing effect (milliseconds per character)
+            var hasStarted = false; // To ensure the animation only starts once
 
-        // background scrolling speed:
-        // document.addEventListener('scroll', function() {
-        //     const scrollPosition = window.pageYOffset;
-        //     const background = document.querySelector('.bg-shape-container');
-        //     const parallaxSpeed = 0.2;
+            // Function to start the typing effect
+            function startTypingEffect() {
+                if (!hasStarted) { // Prevents the animation from starting multiple times
+                    hasStarted = true;
+                    paragraph.style.opacity = 1; // Fade in the paragraph
+                    
+                    let i = 0;
+                    function typeWriter() {
+                        if (i < text.length) {
+                            if (text.charAt(i) === '<') {
+                                // Handle the <br> tags as a whole string
+                                paragraph.innerHTML += '<br>';
+                                i += 4; // Skip over "<br>"
+                            } else {
+                                paragraph.innerHTML += text.charAt(i);
+                                i++;
+                            }
+                            setTimeout(typeWriter, speed);
+                        }
+                    }
+                    typeWriter();
+                }
+            }
 
-        //     background.style.transform = `translate(-50%, ${scrollPosition * parallaxSpeed}px)`;
-        // });
+            // Create an IntersectionObserver
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        startTypingEffect();
+                        observer.unobserve(entry.target); // Stop observing once the animation starts
+                    }
+                });
+            });
+
+            // Observe the container div
+            observer.observe(document.getElementById("typing-container"));
+        });
+
+
+
+
 
     </script>
 
