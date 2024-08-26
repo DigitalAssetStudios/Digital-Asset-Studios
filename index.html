@@ -32,7 +32,7 @@
                 <div class="nav-menu-wrap">
                     <nav class="nav-menu-root">
                         <ul class="nav-list">
-                            <li><a href="#beginning" target="_blank" class="nav-menu-link shrinkable">Home</a></li>
+                            <li><a href="#beginning" class="nav-menu-link shrinkable">Home</a></li>
                             <li><a href="./incubator-page.html" class="nav-menu-link shrinkable">Incubator</a></li>
                             <li><a href="#" class="nav-menu-link shrinkable">Coworking</a></li>
                         </ul>
@@ -53,13 +53,13 @@
     <nav class="page-indicator-nav">
         <ul class="page-indicator-container">
             <li class="page-link-item">
-                <a href="#typing-container" class="page-titles shrinkable">Who We Are</a>
+                <a href="#typing-container" class="section-titles shrinkable">Who We Are</a>
             </li>
             <li class="page-link-item">
-                <a href="#our-service" class="page-titles shrinkable">Start Your Journey</a>
+                <a href="#our-service" class="section-titles shrinkable">Start Your Journey</a>
             </li>
             <li class="page-link-item">
-                <a href="#send-us-memes" class="page-titles shrinkable">Send Us Memes</a>
+                <a href="#send-us-memes" class="section-titles shrinkable">Send Us Memes</a>
             </li>
         </ul>
     </nav>
@@ -100,7 +100,7 @@
 
 
         <!-- Who We Are section -->
-        <div class="who-we-are-section" id="typing-container">
+        <div class="who-we-are-section section" id="typing-container">
             <div class="wwa-content">
                 <div class="wwa-title">WHO <span class="highlight">WE</span> ARE</div>
 
@@ -117,7 +117,7 @@
 
 
         <!-- Our Service section -->
-        <div class="our-service-section" id="our-service">
+        <div class="our-service-section section" id="our-service">
             <div class="service-content">
                 <div class="service-title">START <span class="highlight">YOUR</span> JOURNEY</div>
                 <div class="service-card-container">
@@ -177,7 +177,7 @@
 
 
         <!-- Contact Us section -->
-        <div class="contact-us-section" id="send-us-memes">
+        <div class="contact-us-section section" id="send-us-memes">
             <div class="cu-upper-content" >
                 <div class="cu-title">SEND <span class="highlight">US</span> MEMES</div>
             </div>
@@ -429,6 +429,49 @@
 
             // Observe the container div
             observer.observe(document.getElementById("typing-container"));
+        });
+
+
+
+
+        // page indicator highloghting script:
+        document.addEventListener('DOMContentLoaded', function () {
+            const sectionLinks = document.querySelectorAll('.section-titles');
+            const sections = document.querySelectorAll('.section');
+
+            const options = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.5 // 50% of the section must be in view
+            };
+
+            // Remove active class from all links
+            function removeActiveClass() {
+                sectionLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+            }
+
+            // Add active class to the link corresponding to the section in view
+            function addActiveClass(entry) {
+                const id = entry.target.id;
+                const activeLink = document.querySelector(`a[href="#${id}"]`);
+                removeActiveClass();
+                activeLink.classList.add('active');
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        addActiveClass(entry);
+                    }
+                });
+            }, options);
+
+            // Observe each section
+            sections.forEach(section => {
+                observer.observe(section);
+            });
         });
 
 

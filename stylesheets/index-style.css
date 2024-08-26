@@ -171,16 +171,19 @@ body {
 .page-link-item {
     margin-bottom: 10px;
 }
-.page-titles {
+.section-titles {
     text-decoration: none;
     color: rgb(90, 90, 90);
     font-size: 0.7vw;
     transition: color 0.3s ease;
     cursor: none;
 }
-.page-titles:hover {
+.section-titles:hover {
     color: var(--green_color);
     cursor: none;
+}
+.section-titles:active {
+    color: var(--green_color);
 }
 
 

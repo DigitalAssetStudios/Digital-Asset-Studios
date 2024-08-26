@@ -12,5 +12,132 @@
 </head>
 <body>
     
+    <!-- Custome Mouse Cursor -->
+    <div class="custom-mouse-cursor">
+        <div class="cursor-shape cursor-big-shape"></div>
+        <div class="cursor-shape cursor-small-shape"></div>
+    </div>
+
+
+
+    <!-- Navigation bar section -->
+    <header class="navigation-bar-root">
+        <div class="navigation-wrap">
+            <div class="navigation-content">
+                <div class="nav-logo">
+                    <a href="./index.html" class="nav-logo-bt">
+                        <img src="./assets/green-das-logo.svg" alt="Logo" class="nav-logo-img shrinkable">
+                    </a>
+                </div>
+                <div class="nav-menu-wrap">
+                    <nav class="nav-menu-root">
+                        <ul class="nav-list">
+                            <li><a href="./index.html" class="nav-menu-link shrinkable">Home</a></li>
+                            <li><a href="#" class="nav-menu-link shrinkable">Incubator</a></li>
+                            <li><a href="#" class="nav-menu-link shrinkable">Coworking</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-btns">
+                    <a href="#" class="apply-now-bt shrinkable">
+                        <span>Apply Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Landing section of page -->
+    <div class="landing-section">
+        <div class="landing-content">
+            <div class="page-title">THE GLOBAL INCUBATOR</div>
+            <h2 class="page-tagline">Build, Launch and Grow Your Startup</h2>
+        </div>
+    </div>
+
+
+    <!-- Include GSAP (TweenMax) library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+
+
+        const $bigShape = document.querySelector('.cursor-big-shape');
+        const $smallShape = document.querySelector('.cursor-small-shape');
+        const $hoverables = document.querySelectorAll('.hoverable');
+        const $shrinkables = document.querySelectorAll('.shrinkable');
+
+        // Move the cursor
+        function onMouseMove(e) {
+            gsap.to($bigShape, {
+                x: e.clientX - 15,
+                y: e.clientY - 15,
+                duration: 0.4
+            });
+            gsap.to($smallShape, {
+                x: e.clientX - 5,
+                y: e.clientY - 5,
+                duration: 0.1
+            });
+        }
+
+        // Hover an element to make the cursor bigger
+        function onMouseHover() {
+            gsap.to($bigShape, {
+                scale: 2,
+                duration: 0.3
+            });
+            gsap.to($smallShape, {
+                scale: 2,
+                duration: 0.3
+            });
+        }
+        function onMouseHoverOut() {
+            gsap.to($bigShape, {
+                scale: 1,
+                duration: 0.3
+            });
+            gsap.to($smallShape, {
+                scale: 1,
+                duration: 0.3
+            });
+        }
+
+
+        // Hover an element to make the cursor smaller
+        function onMouseShrink() {
+            gsap.to($bigShape, {
+                scale: 0.5,
+                duration: 0.3
+            });
+            gsap.to($smallShape, {
+                scale: 0.5,
+                duration: 0.3
+            });
+        }
+        function onMouseShrinkOut() {
+            gsap.to($bigShape, {
+                scale: 1,
+                duration: 0.3
+            });
+            gsap.to($smallShape, {
+                scale: 1,
+                duration: 0.3
+            });
+        }
+
+        document.body.addEventListener('mousemove', onMouseMove);
+        $hoverables.forEach(hoverable => {
+            hoverable.addEventListener('mouseenter', onMouseHover);
+            hoverable.addEventListener('mouseleave', onMouseHoverOut);
+        });
+        $shrinkables.forEach(shrinkable => {
+            shrinkable.addEventListener('mouseenter', onMouseShrink);
+            shrinkable.addEventListener('mouseleave', onMouseShrinkOut);
+        });
+
+
+    </script>
+
 </body>
 </html>
