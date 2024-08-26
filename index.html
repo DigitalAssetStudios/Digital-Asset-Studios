@@ -33,7 +33,7 @@
                     <nav class="nav-menu-root">
                         <ul class="nav-list">
                             <li><a href="#beginning" target="_blank" class="nav-menu-link shrinkable">Home</a></li>
-                            <li><a href="#" class="nav-menu-link shrinkable">Incubator</a></li>
+                            <li><a href="./incubator-page.html" class="nav-menu-link shrinkable">Incubator</a></li>
                             <li><a href="#" class="nav-menu-link shrinkable">Coworking</a></li>
                         </ul>
                     </nav>
@@ -51,40 +51,18 @@
 
     <!-- page indicator nav bar -->
     <nav class="page-indicator-nav">
-        <div class="mask-wrapper">
-            <div class="nav-mask">
-                <div class="nav-item-container">
-                    <button class="indi-nav-link">
-                        <div class="page-title-container">
-                            <div class="line"></div>
-                            <div class="page-name">Who We Are</div>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="nav-mask">
-                <div class="nav-item-container">
-                    <button class="indi-nav-link">
-                        <div class="page-title-container">
-                            <div class="line"></div>
-                            <div class="page-name">Start Your Journey</div>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="nav-mask">
-                <div class="nav-item-container">
-                    <button class="indi-nav-link">
-                        <div class="page-title-container">
-                            <div class="line"></div>
-                            <div class="page-name">Send Us Memes</div>
-                        </div>
-                    </button>
-                </div>
-            </div>
-        </div>
+        <ul class="page-indicator-container">
+            <li class="page-link-item">
+                <a href="#typing-container" class="page-titles shrinkable">Who We Are</a>
+            </li>
+            <li class="page-link-item">
+                <a href="#our-service" class="page-titles shrinkable">Start Your Journey</a>
+            </li>
+            <li class="page-link-item">
+                <a href="#send-us-memes" class="page-titles shrinkable">Send Us Memes</a>
+            </li>
+        </ul>
     </nav>
-
 
 
 
@@ -139,7 +117,7 @@
 
 
         <!-- Our Service section -->
-        <div class="our-service-section">
+        <div class="our-service-section" id="our-service">
             <div class="service-content">
                 <div class="service-title">START <span class="highlight">YOUR</span> JOURNEY</div>
                 <div class="service-card-container">
@@ -199,7 +177,7 @@
 
 
         <!-- Contact Us section -->
-        <div class="contact-us-section">
+        <div class="contact-us-section" id="send-us-memes">
             <div class="cu-upper-content" >
                 <div class="cu-title">SEND <span class="highlight">US</span> MEMES</div>
             </div>
@@ -452,7 +430,6 @@
             // Observe the container div
             observer.observe(document.getElementById("typing-container"));
         });
-
 
 
 
