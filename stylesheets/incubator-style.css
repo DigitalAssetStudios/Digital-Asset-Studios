@@ -170,13 +170,44 @@ body {
 .page-tagline {
     font-weight: 400;
 }
+.scroll-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+    height: 40px;
+    background-color: var(--navy_color);
+    z-index: 2;
+}
+.scroll-indicator-text a {
+    cursor: none;
+}
+.scroll-indicator-text {
+    text-decoration: none;
+    color: var(--white-color);
+    cursor: none;
+}
+
+
+
+/* roadmpa section style */
+.roadmap-section {
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navy_color);
+    transition: background-color 1.5s ease;
+}
 .line {
     position: relative;
     background-color: var(--white-color);
     box-shadow: 0px 0px 12px var(--white-color);
     width: 4px;
-    height: 10vh;
-    top: 10px;
+    height: 200vh;
+    top: -180px;
     left: 0px;
     overflow: hidden;
 }
@@ -200,61 +231,14 @@ body {
     top: 120%;
   }
 }
-.scroll-text-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: none;
+.card-content {
+   display: flex;
+   gap: 20px;
+   background-image: linear-gradient(var(--green_color), var(--navy_color));
+   padding: 20px 40px;
+   border: 4px solid var(--navy_color);
+   border-radius: 15px;
 }
-.scroll-indicator-text a {
-    cursor: none;
-}
-.scroll-indicator-text {
-    text-decoration: none;
-    color: var(--white-color);
-    cursor: none;
-}
-
-
-
-/* roadmpa section style */
-.roadmap-section {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--navy_color);
-    transition: background-color 1.5s ease;
-}
-.road-line {
-    position: relative;
-    background-color: var(--white-color);
-    box-shadow: 0px 0px 12px var(--white-color);
-    width: 4px;
-    height: 120vh;
-    top: -30px;
-    left: 0px;
-    overflow: hidden;
-}
-.road-scanner-pulse {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: var(--green_color);
-    width: 100%;
-    height: 20px;
-    border-radius: 50%;
-    animation: road-scanner-loop 5s ease-in-out infinite;
-    filter: blur(1px);
-}
-@keyframes road-scanner-loop
-{
-  0% {
-    top: -50px;
-  }
-  100% {
-    top: 120%;
-  }
+.card-title {
+    font-size: 2vw;
 }
