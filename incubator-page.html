@@ -55,8 +55,10 @@
             <h2 class="page-sub-title">Tailored. Modular. Global.</h2>
             <h2 class="page-tagline">Level the Playing Field with the<br>Complete Web3 Incubator</h2>
         </div>
-        <div class="scroll-text-container">
-            <a href="#"><h5 class="scroll-indicator-text">Start Your Journey</h5></a>
+        <div class="scroll-text-container shrinkable">
+            <button class="scroll-indicator-button" onclick="scrollToRoadmap()">
+                Start Your Journey
+            </button>
         </div>
     </div>
 
@@ -129,7 +131,6 @@
                 duration: 0.1
             });
         }
-
         // Hover an element to make the cursor bigger
         function onMouseHover() {
             gsap.to($bigShape, {
@@ -151,8 +152,6 @@
                 duration: 0.3
             });
         }
-
-
         // Hover an element to make the cursor smaller
         function onMouseShrink() {
             gsap.to($bigShape, {
@@ -186,22 +185,36 @@
         });
 
 
+
     // Changing the backgorund of the roadmap as you scroll:
         window.addEventListener('scroll', function() {
             const roadmapSection = document.getElementById('roadmap-section');
+            const customCursor = document.querySelector('.custom-mouse-cursor');
             const sectionTop = roadmapSection.getBoundingClientRect().top;
-            const sectionHeight = roadmapSection.offsetHeight;
+            const sectionBottom = sectionTop + roadmapSection.offsetHeight;
             const windowHeight = window.innerHeight;
 
-            // Calculate the trigger point (20% of the section height)
-            const triggerPoint = sectionHeight * 0.2;
-
-            if (sectionTop < windowHeight - triggerPoint && sectionTop > -sectionHeight + triggerPoint) {
+            // Check if the section is within the viewport
+            if (sectionTop < windowHeight && sectionBottom > 0) {
                 roadmapSection.style.backgroundColor = 'var(--green_color)';
+                customCursor.style.setProperty('mix-blend-mode', 'difference', 'important');
             } else {
                 roadmapSection.style.backgroundColor = 'var(--navy_color)';
+                customCursor.style.setProperty('mix-blend-mode', 'none', 'important');
             }
         });
+
+
+
+
+        // Scroll to roadmap indicator script:
+        function scrollToRoadmap() {
+            const element = document.getElementById('roadmap-section');
+            const yOffset = -10;
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
 
     </script>
 
