@@ -105,9 +105,69 @@
     </div>
 
 
+    <!-- The DAS offering section -->
+    <div class="das-offering-section" id="fixed-title-section">
+        <h2 class="offering-header">The DAS Offering</h2>
+        <div class="offering-content">
+            <div class="stage-card">
+            </div>
+            <div class="stage-card">
+            </div>
+            <div class="stage-card">
+            </div>
+            <div class="stage-card">
+            </div>
+            <div class="stage-card">
+            </div>
+        </div>
+    </div>
 
 
-
+    <!-- Contact Us section -->
+    <div class="contact-us-section section" id="send-us-memes">
+        <div class="cu-upper-content" >
+            <div class="cu-title">SEND <span class="highlight">US</span> MEMES</div>
+        </div>
+        <div class="social-media-links">
+            <a href="https://www.linkedin.com/company/digital-asset-studios/" target="_blank" >
+                <img src="./assets/linkedin-icon.svg" alt="linked In icon" class="social-media-icon">
+            </a>
+        </div>
+        <div class="cu-down-content">
+            <form action="" class="contact-form">
+                <div class="form-content">
+                    <div class="input-container">
+                        <input id="firstname" class="input" type="text" placeholder=" " required>
+                        <div class="cut"></div>
+                        <label for="firstname" class="placeholder">First Name</label>
+                    </div>
+                    <div class="input-container">
+                        <input id="lastname" class="input" type="text" placeholder=" " required>
+                        <div class="cut"></div>
+                        <label for="lastname" class="placeholder">Last Name</label>
+                    </div>
+                    <div class="input-container full-length">
+                        <input id="email" class="input" type="text" placeholder=" " required>
+                        <div class="cut cut-short"></div>
+                        <label for="firstname" class="placeholder">Email</label>
+                    </div>
+                    <div class="input-container full-length">
+                        <input id="subject" class="input" type="text" placeholder=" ">
+                        <div class="cut cut-short"></div>
+                        <label for="subject" class="placeholder">Subject</label>
+                    </div>
+                    <div class="input-container message-sizing">
+                        <input id="message" class="input" type="text" placeholder=" " required>
+                        <div class="cut"></div>
+                        <label for="message" class="placeholder">Message</label>
+                    </div>
+                </div>
+                <button class="form-submit-bt hoverable glow-on-hover">
+                    <span class="form-bt-text">SEND</span>
+                </button>
+            </form>
+        </div>
+    </div>
 
 
 
@@ -258,7 +318,7 @@
             const cards = document.querySelectorAll('.card-content');
 
             const observer = new IntersectionObserver(handleCardAnimation, {
-                threshold: 0.7  // Trigger when 10% of the card is in view
+                threshold: 0.7  // Trigger when 70% of the card is in view
             });
 
             cards.forEach(card => observer.observe(card));
@@ -266,6 +326,22 @@
 
 
 
+    // DAS Offering header text fixing script:
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('.offering-header');
+            const section = document.getElementById('fixed-title-section');
+            const rect = section.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            const offset = 30; // Offset in vh
+
+            if (rect.top <= offset / 100 * viewportHeight && rect.bottom >= viewportHeight - (offset / 100 * viewportHeight)) {
+                // When the header is within the offset from the top and bottom
+                header.classList.add('fixed');
+            } else {
+                // When the header is outside the offset
+                header.classList.remove('fixed');
+            }
+        });
 
 
 
