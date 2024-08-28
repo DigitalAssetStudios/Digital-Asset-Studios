@@ -68,9 +68,16 @@
         <div class="line">
             <div class="scanner-pulse"></div>
         </div>
-        <div class="road-map-content">
-            <div class="road-map-header">
-                <h2>Empowering Your Vision Unlocking Your Potential</h2>
+        <div class="roadmap-content">
+            <div class="roadmap-header">
+                <h2 class="rm-header-text">
+                    <span>Empowering</span>
+                    <span>Your</span>
+                    <span>Vision</span>
+                    <span>Unlocking</span>
+                    <span>Your</span>
+                    <span>Potential</span>
+                </h2>
             </div>
             <div class="pointer-card-containers">
                 <div class="card-content">
@@ -207,7 +214,7 @@
 
 
 
-        // Scroll to roadmap indicator script:
+    // Scroll to roadmap indicator script:
         function scrollToRoadmap() {
             const element = document.getElementById('roadmap-section');
             const yOffset = -10;
@@ -215,6 +222,27 @@
 
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
+
+
+
+    // Trigger for text animation in roadmap section:
+        document.addEventListener('DOMContentLoaded', function () {
+            const section = document.querySelector('.roadmap-section');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        section.classList.add('animate');
+                    }
+                });
+            }, {
+                threshold: 0.4  // Trigger when 40% of the section is in view
+            });
+
+            observer.observe(section);
+        });
+
+
 
     </script>
 

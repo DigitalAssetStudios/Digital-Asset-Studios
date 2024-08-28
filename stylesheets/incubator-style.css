@@ -29,6 +29,33 @@ body {
     background-color: var(--navy_color);
     overflow-x: hidden;
 }
+.animate {
+    .rm-header-text {
+        animation: scaleText 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    }
+    span {
+        animation: fade-in 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    span:nth-child(1) {
+        animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    span:nth-child(2) {
+        animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    span:nth-child(3) {
+        animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    span:nth-child(4) {
+        animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    span:nth-child(5) {
+        animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    span:nth-child(6) {
+        animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+}
+
 
 
 
@@ -193,6 +220,7 @@ body {
 
 /* roadmpa section style */
 .roadmap-section {
+    position: relative;
     width: 100vw;
     height: 200vh;
     display: flex;
@@ -203,13 +231,13 @@ body {
     transition: background-color 1.5s ease;
 }
 .line {
-    position: relative;
+    position: absolute;
     background-color: var(--white-color);
     box-shadow: 0px 0px 12px var(--white-color);
     width: 4px;
     height: 200vh;
     top: -25vh;
-    left: 0px;
+    left: 50%;
     overflow: hidden;
 }
 .scanner-pulse {
@@ -231,6 +259,40 @@ body {
   100% {
     top: 120%;
   }
+}
+.roadmap-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: ce;
+    gap: 20vw;
+}
+.roadmap-header {
+    width: 30%;
+}
+.rm-header-text {
+    font-size: 4vw;
+    color: var(--navy_color);
+    transform: scale(0.94);
+    animation: none;
+}
+@keyframes scaleText {
+    100% {
+        transform: scale(1);
+    }
+}
+span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+    animation: none;
+}
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
 }
 .card-content {
     display: grid;
