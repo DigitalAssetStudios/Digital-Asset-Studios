@@ -106,18 +106,95 @@
 
 
     <!-- The DAS offering section -->
-    <div class="das-offering-section" id="fixed-title-section">
+    <div class="sep-offering-title">
         <h2 class="offering-header">The DAS Offering</h2>
+    </div>
+    <div class="das-offering-section">
         <div class="offering-content">
-            <div class="stage-card">
+            <div class="stage-card stage1">
+                <h3 class="card-section-header">Grants</h3>
+                <div class="cards-container">
+                    <div class="card1 card-style">
+                        <h4 class="stage-header">Round Overview</h4>
+                        <p class="stage-par">Flexible, milestone-based funding which is non-<br>dilutive with small ticket size</p>
+                    </div>
+                    <div class="card2 card-style">
+                        <h4 class="stage-header">Participating Investors</h4>
+                        <p class="stage-par">Ecosystems and foundations</p>
+                    </div>
+                    <div class="card3 card-style">
+                        <h4 class="stage-header">Use Cases</h4>
+                        <p class="stage-par">Grants are used to conduct detailed research of<br>novel ideas, start an early adopter community<br>and begin building the MVP. Grantors may expect<br>integration into their ecosystem</p>
+                    </div>
+                </div>
             </div>
-            <div class="stage-card">
+            <div class="stage-card stage2">
+                <h3 class="card-section-header">Angel</h3>
+                <div class="cards-container">
+                    <div class="card1 card-style">
+                        <h4 class="stage-header">Round Overview</h4>
+                        <p class="stage-par">Hands on investors with extensive experience in your field. Leveraging their networking effect with small ticket sizes</p>
+                    </div>
+                    <div class="card2 card-style">
+                        <h4 class="stage-header">Participating Investors</h4>
+                        <p class="stage-par">Angels (Ex VC, PE, founders with successful exits, etc)</p>
+                    </div>
+                    <div class="card3 card-style">
+                        <h4 class="stage-header">Use Cases</h4>
+                        <p class="stage-par">Hiring a small core team, complete the legal structuring and MVP / Alpha and begin testing on early adopters</p>
+                    </div>
+                </div>
             </div>
-            <div class="stage-card">
+            <div class="stage-card stage2">
+                <h3 class="card-section-header">Angel</h3>
+                <div class="cards-container">
+                    <div class="card1 card-style">
+                        <h4 class="stage-header">Round Overview</h4>
+                        <p class="stage-par">Hands on investors with extensive experience in your field. Leveraging their networking effect with small ticket sizes</p>
+                    </div>
+                    <div class="card2 card-style">
+                        <h4 class="stage-header">Participating Investors</h4>
+                        <p class="stage-par">Angels (Ex VC, PE, founders with successful exits, etc)</p>
+                    </div>
+                    <div class="card3 card-style">
+                        <h4 class="stage-header">Use Cases</h4>
+                        <p class="stage-par">Hiring a small core team, complete the legal structuring and MVP / Alpha and begin testing on early adopters</p>
+                    </div>
+                </div>
             </div>
-            <div class="stage-card">
+            <div class="stage-card stage2">
+                <h3 class="card-section-header">Angel</h3>
+                <div class="cards-container">
+                    <div class="card1 card-style">
+                        <h4 class="stage-header">Round Overview</h4>
+                        <p class="stage-par">Hands on investors with extensive experience in your field. Leveraging their networking effect with small ticket sizes</p>
+                    </div>
+                    <div class="card2 card-style">
+                        <h4 class="stage-header">Participating Investors</h4>
+                        <p class="stage-par">Angels (Ex VC, PE, founders with successful exits, etc)</p>
+                    </div>
+                    <div class="card3 card-style">
+                        <h4 class="stage-header">Use Cases</h4>
+                        <p class="stage-par">Hiring a small core team, complete the legal structuring and MVP / Alpha and begin testing on early adopters</p>
+                    </div>
+                </div>
             </div>
-            <div class="stage-card">
+            <div class="stage-card stage2">
+                <h3 class="card-section-header">Angel</h3>
+                <div class="cards-container">
+                    <div class="card1 card-style">
+                        <h4 class="stage-header">Round Overview</h4>
+                        <p class="stage-par">Hands on investors with extensive experience in your field. Leveraging their networking effect with small ticket sizes</p>
+                    </div>
+                    <div class="card2 card-style">
+                        <h4 class="stage-header">Participating Investors</h4>
+                        <p class="stage-par">Angels (Ex VC, PE, founders with successful exits, etc)</p>
+                    </div>
+                    <div class="card3 card-style">
+                        <h4 class="stage-header">Use Cases</h4>
+                        <p class="stage-par">Hiring a small core team, complete the legal structuring and MVP / Alpha and begin testing on early adopters</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -323,26 +400,6 @@
 
             cards.forEach(card => observer.observe(card));
         });
-
-
-
-    // DAS Offering header text fixing script:
-        document.addEventListener('scroll', () => {
-            const header = document.querySelector('.offering-header');
-            const section = document.getElementById('fixed-title-section');
-            const rect = section.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-            const offset = 30; // Offset in vh
-
-            if (rect.top <= offset / 100 * viewportHeight && rect.bottom >= viewportHeight - (offset / 100 * viewportHeight)) {
-                // When the header is within the offset from the top and bottom
-                header.classList.add('fixed');
-            } else {
-                // When the header is outside the offset
-                header.classList.remove('fixed');
-            }
-        });
-
 
 
     </script>
