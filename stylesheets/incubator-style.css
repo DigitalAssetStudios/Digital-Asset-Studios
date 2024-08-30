@@ -350,18 +350,30 @@ body {
 /* cards */
 .das-offering-section {
     width: 100vw;
-    height: 300vh;
+    height: 470vh;
     position: relative;
 }
 .offering-content {
     display: flex;
     flex-direction: column;
+    gap: 25vh;
+    margin-top: 100vh;
 }
 .stage-card {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 80%;
+    margin: 20px 0;
+}
+.left-card {
+    align-self: flex-start;
+    margin-left: 0;
+}
+.right-card {
+    align-self: flex-end;
+    margin-right: 0;
 }
 .card-section-header {
     font-size: 5vw;
@@ -380,7 +392,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 30vw;
-    background: var(--green_color);
+    background-color: var(--green_color);
     clip-path: polygon(10% 0%, 90% 0%, 100% 30%, 100% 70%, 90% 100%, 10% 100%, 0% 70%, 0% 30%);    display: flex;
     align-items: center;
     justify-content: center;
@@ -397,9 +409,6 @@ body {
     font-weight: 600;
     margin: 5px 0 10px 0;
 }
-.stage1 {
-    float: left;
-}
 .card2 {
     grid-column: 2;
     grid-row: 2;
@@ -408,6 +417,19 @@ body {
     grid-column: 1;
     grid-row: 3;
 }
+.card4 {
+    grid-column: 2;
+    grid-row: 1;
+}
+.card5 {
+    grid-column: 1;
+    grid-row: 2;
+}
+.card6 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
 
 
 
