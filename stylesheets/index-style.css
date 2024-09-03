@@ -765,7 +765,7 @@ body {
     left: 20px;
     position: absolute;
     top: -20px;
-    transform: translateY(0);
+    transform: translateY(0px);
     transition: transform 200ms;
     width: 76px;
 }
@@ -782,7 +782,7 @@ body {
     position: absolute;
     transform-origin: 0 50%;
     transition: transform 200ms, color 200ms;
-    top: 20px;
+    top: 0.5rem;
 }
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown) ~ .placeholder {

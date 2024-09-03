@@ -329,9 +329,9 @@ body {
 
 
 
-/* DAS offering section style */
+/* DAS fundraising section style */
 /* title */
-.sep-offering-title {
+.sep-fundraising-title {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -342,18 +342,18 @@ body {
     align-items: center;
     z-index: -1;
 }
-.offering-header {
+.fundraising-header {
     font-size: 7vw;
     margin: 0;
     text-align: center;
 }
 /* cards */
-.das-offering-section {
+.das-fundraising-section {
     width: 100vw;
     height: 470vh;
     position: relative;
 }
-.offering-content {
+.fundraising-content {
     display: flex;
     flex-direction: column;
     gap: 25vh;
@@ -364,8 +364,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin: 20px 0;
+    backdrop-filter: blur(3.7rem);
 }
 .left-card {
     align-self: flex-start;
@@ -430,6 +431,15 @@ body {
     grid-row: 3;
 }
 
+
+
+/* The DAS Offering section style */
+.das-offering-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--navy_color);
+    
+}
 
 
 
@@ -538,7 +548,7 @@ body {
     position: absolute;
     transform-origin: 0 50%;
     transition: transform 200ms, color 200ms;
-    top: 20px;
+    top: 0.5rem;
 }
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown) ~ .placeholder {
