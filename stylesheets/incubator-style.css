@@ -350,7 +350,7 @@ body {
 /* cards */
 .das-fundraising-section {
     width: 100vw;
-    height: 470vh;
+    height: 670vh;
     position: relative;
 }
 .fundraising-content {
@@ -433,13 +433,59 @@ body {
 
 
 
+
+
+
+
+
 /* The DAS Offering section style */
 .das-offering-section {
     width: 100vw;
     height: 100vh;
     background-color: var(--navy_color);
-    
 }
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .carousel-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .carousel-content p {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+
+
+
+
+
+
+
 
 
 
