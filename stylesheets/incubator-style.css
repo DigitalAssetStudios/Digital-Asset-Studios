@@ -511,13 +511,54 @@ body {
 .arrow-right {
     border-left: 20px solid var(--navy_color);
 }
-
-
-
-
-
-
-
+.carousel-container {
+    position: relative;
+    width: 100%;
+    padding: 48px;
+}
+.carousel-card-container {
+    display: grid;
+    grid-template-columns: calc(8.33333% - 29.3333px);
+    gap: 32px;
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+    list-style: none;
+}
+.fun-card-container {
+    grid-area: 1 / span 4;
+    align-self: flex-start;
+    z-index: 4;
+    opacity: 1;
+    user-select: none;
+    color: var(--navy_color);
+}
+.fun-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 20vw;
+    border-radius: 25px;
+    text-align: center;
+}
+.green {
+    background-color: var(--green_color);
+}
+.navy {
+    background-color: var(--blue-white);
+}
+.fund-stage-title {
+    font-size: 3rem;
+    color: var(--blue-white);
+}
+.navy .fund-stage-title {
+    color: var(--navy_color);
+}
+.fund-par {
+    padding: 0 30px;
+}
 
 
 
