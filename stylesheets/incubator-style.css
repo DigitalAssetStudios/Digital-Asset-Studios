@@ -7,6 +7,10 @@
     --main-font: "Black Future", "sans-serif";
     --sup-font: "Lato", sans-serif;
     --messurments: 1440;
+    --card-height: 40vw;
+	--card-margin: 4vw;
+	--card-top-offset: 1em;
+	--numcards: 5;
 }
 
 @font-face {
@@ -330,108 +334,79 @@ body {
 
 
 /* The das fundraising section style */
-/* title */
-.sep-fundraising-title {
+.section-seperated-header {
     width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+    height: 30vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -1;
-    display: flex;
-    flex-direction: column;
 }
-.fundraising-header {
-    font-size: 6vw;
-    margin: 0;
-    text-align: center;
-}
-/* cards */
-.das-fundraising-section {
-    width: 100vw;
-    height: 600vh;
-    position: relative;
-}
-.fundraising-content {
-    display: flex;
-    flex-direction: column;
-    gap: 25vh;
-    margin-top: 100vh;
-}
-.stage-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: 20px 0;
-    backdrop-filter: blur(3.7rem);
-}
-.left-card {
-    align-self: flex-start;
-    margin-left: 0;
-}
-.right-card {
-    align-self: flex-end;
-    margin-right: 0;
-}
-.card-section-header {
-    font-size: 5vw;
-    color: var(--green_color);
+.vert-cards-container-title {
     font-family: var(--main-font);
-    margin: 20px;
+    font-size: 7rem;
 }
-.cards-container {
+.das-fundraising-section {
+    width: 80vw;
+    height: 480vh;
+    margin: 0 auto;
+}
+#vert-cards-container {
+    padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+    margin-bottom: var(--card-margin);
+    list-style: none;
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--numcards), var(--card-height));
+    gap: var(--card-margin);
+}
+.vert-card {
+    position: sticky;
+    top: 0;
+    padding-top: var(--card-top-offset);
+    transform-origin: 50% 0%;
+    will-change: transform;
+}
+.vert-card-content {
+	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+    background: var(--white-color);
+    color: var(--navy_color);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "text img";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-rows: auto;
+    align-items: stretch;
 }
-.card-style {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-    background-color: var(--green_color);
-    clip-path: polygon(10% 0%, 90% 0%, 100% 30%, 100% 70%, 90% 100%, 10% 100%, 0% 70%, 0% 30%);    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
+.vert-card-text {
+    grid-area: text;
+    width: 80%;
+    place-self: center;
+    text-align: left;
+    display: grid;
+    gap: 1em;
+    place-items: start;
 }
-.stage-header {
-    font-size: 1.5vw;
-    color: var(--navy_color);
-    margin: 0 0 5px 0;
+.vert-card-content > figure {
+    grid-area: img;
+    overflow: hidden;
 }
-.stage-par {
-    color: var(--navy_color);
-    font-weight: 600;
-    margin: 5px 0 10px 0;
+.vert-card-content > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.card2 {
-    grid-column: 2;
-    grid-row: 2;
+.vert-card-header {
+    font-weight: 400;
+    font-size: 6em;
 }
-.card3 {
-    grid-column: 1;
-    grid-row: 3;
+.vert-card-par {
+    font-weight: 300;
+    line-height: 1.43;
 }
-.card4 {
-    grid-column: 2;
-    grid-row: 1;
-}
-.card5 {
-    grid-column: 1;
-    grid-row: 2;
-}
-.card6 {
-    grid-column: 2;
-    grid-row: 3;
-}
+
+
+
 
 
 
@@ -542,9 +517,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--green_color);
+    /* background-color: var(--green_color); */
     scroll-snap-align: center;
     border-radius: 25px;
+}
+.white-bg {
+    background-color: var(--blue-white);
+    color: var(--navy_color);
+}
+.green-bg {
+    background-color: var(--green_color);
 }
 .offer-stage-title {
     font-size: 2rem;
