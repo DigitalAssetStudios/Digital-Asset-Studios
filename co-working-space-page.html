@@ -61,11 +61,22 @@
     <!-- Landing section -->
     <div class="landing-section">
         <div class="landing-content-container">
-            
+            <div class="landing-text-area">
+                <h1 class="landing-text-title">Coworking Space</h1>
+                <h3 class="landing-text-tagline">Your Digital Asset Hub</h3>
+            </div>
+            <div class="landing-bg-img">
+                <canvas id="earthCanvas"></canvas>
+            </div>
         </div>
-        <canvas id="earthCanvas"></canvas>
     </div>
 
+
+
+    <!-- office space -->
+    <div class="office-space-container">
+
+    </div>
 
 
 
@@ -157,18 +168,18 @@
 
 
     // Animated sphere script:
-    // Initialize scene, camera, and renderer
-    const scene = new THREE.Scene();
+        // Initialize scene, camera, and renderer
+        const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('earthCanvas') });
+        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('earthCanvas'), alpha: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
         
         // Create a sphere geometry
-        const geometry = new THREE.SphereGeometry(1, 32, 32);
+        const geometry = new THREE.SphereGeometry(1.5, 42, 42);
 
-        // Create a wireframe material for the sphere
+        // Create a wireframe material with the color #01c38d
         const wireframeMaterial = new THREE.MeshBasicMaterial({
-            color: '#01c38d',
+            color: '#2D5449',
             wireframe: true
         });
 
@@ -192,15 +203,15 @@
         scene.add(earthOutline);
         
         // Position the camera
-        camera.position.z = 3;
+        camera.position.z = 2;
         
         // Animation loop
         function animate() {
             requestAnimationFrame(animate);
             
             // Rotate both the wireframe and the outline
-            earth.rotation.y += 0.005;
-            earthOutline.rotation.y += 0.005;
+            earth.rotation.y += 0.001;
+            earthOutline.rotation.y += 0.001;
             
             // Render the scene
             renderer.render(scene, camera);
