@@ -199,4 +199,9 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: var(--green_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
