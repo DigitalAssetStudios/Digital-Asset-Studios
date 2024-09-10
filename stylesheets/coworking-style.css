@@ -197,16 +197,26 @@ body {
 /* office space style */
 .office-space-container {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     background-color: var(--green_color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 .space-text-container {
     text-align: center;
+    margin: 6vw 0 0 0;
+}
+.space-text-container h2 {
+    color: var(--navy_color);
+    font-size: 3vw;
+    margin: 0 0 20px 0;
+}
+.space-text-container p {
+    color: var(--navy_color);
+    margin: 0 0 20px 0;
+    font-size: 1.2vw;
 }
 .space-img-container {
     position: relative;
@@ -245,4 +255,8 @@ body {
 #img-3:hover {
     z-index: 1;
     width: 450px;
+}
+.cape-town-link {
+    text-decoration: none;
+    color: var(--green);
 }
