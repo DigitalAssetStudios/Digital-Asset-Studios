@@ -205,3 +205,44 @@ body {
     align-items: center;
     position: relative;
 }
+.space-text-container {
+    text-align: center;
+}
+.space-img-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    padding-top: 20px;
+    transition: transform 0.3s ease 0s;
+}
+#img-1 {
+    position: absolute;
+    width: 500px;
+    right: -20px;
+}
+#img-1:hover {
+    z-index: 1;
+    width: 550px;
+}
+#img-2 {
+    position: absolute;
+    width: 500px;
+    left: 5px;
+    top: 60px;
+}
+#img-2:hover {
+    z-index: 1;
+    width: 550px;
+}
+#img-3 {
+    position: absolute;
+    width: 400px;
+    top: 250px;
+    right: -130px;
+}
+#img-3:hover {
+    z-index: 1;
+    width: 450px;
+}
