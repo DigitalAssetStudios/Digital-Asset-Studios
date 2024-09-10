@@ -260,3 +260,11 @@ body {
     text-decoration: none;
     color: var(--green);
 }
+
+
+
+/* companies in office style */
+.campnies-section {
+    width: 100vw;
+    height: 100vh;
+}
