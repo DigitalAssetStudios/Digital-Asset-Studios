@@ -362,7 +362,7 @@ body {
 .vert-card {
     position: sticky;
     top: 0;
-    padding-top: var(--card-top-offset);
+    padding-top: 5vw;
     transform-origin: 50% 0%;
     will-change: transform;
 }
@@ -397,12 +397,13 @@ body {
     object-fit: cover;
 }
 .vert-card-header {
-    font-weight: 400;
-    font-size: 6em;
+    font-weight: 600;
+    font-size: 3em;
+    color: var(--green_color);
 }
 .vert-card-par {
     font-weight: 300;
-    line-height: 1.43;
+    padding: 0;
 }
 
 
