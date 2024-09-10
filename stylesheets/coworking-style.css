@@ -1,7 +1,7 @@
 /* Defined Variable */
 :root {
     --navy_color: rgba(25, 30, 41, 1);
-    --green_color: rgba(1, 195, 141, 1);
+    --green_color: rgba(1, 195, 141);
     --white-color: rgba(245, 248, 255, 1);
     --blue-white: rgba(235, 241, 255, 1);
     --main-font: "Black Future", "sans-serif";
@@ -151,3 +151,10 @@ body {
 
 
 /* Landing section style: */
+.landing-section {
+    height: 100vh;
+    width: 100vw;
+}
+canvas {
+    display: block;
+}
