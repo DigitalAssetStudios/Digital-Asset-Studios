@@ -41,9 +41,9 @@
                 <div class="nav-menu-wrap">
                     <nav class="nav-menu-root">
                         <ul class="nav-list">
-                            <li><a href="#beginning" class="nav-menu-link shrinkable">Home</a></li>
-                            <li><a href="./incubator-page.html" class="nav-menu-link shrinkable">Incubator</a></li>
-                            <li><a href="./co-working-space-page.html" class="nav-menu-link shrinkable">Coworking</a></li>
+                            <li><a href="#beginning" class="nav-menu-link shrinkable hover-this">Home</a></li>
+                            <li><a href="./incubator-page.html" class="nav-menu-link shrinkable hover-this">Incubator</a></li>
+                            <li><a href="./co-working-space-page.html" class="nav-menu-link shrinkable hover-this">Coworking</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -84,6 +84,7 @@
                 <h2 class="page-tagline">Build, Launch and Grow Your Startup</h2>
                 <img src="./assets/das-logo-for-dark-bg.svg" alt="DAS Logo" class="page-das-logo">
             </div>
+            <div class="scroll-mouse"></div>
         </div>
 
 
@@ -113,13 +114,13 @@
             <div class="wwa-content">
                 <div class="wwa-title">WHO <span class="highlight">WE</span> ARE</div>
 
-                <p id="typing-paragraph"></p>
+                <!-- <p id="typing-paragraph"></p> -->
 
-                <!-- <p class="wwa-par">
+                <p class="wwa-par">
                     A Web3 focused incubator dedicated to nurturing startups, anywhere between ideation and those that have raised under $3 milion.<br>
                     <br>We embrace a build till success methodology with a cross-niche approach, drawing valuable insights across sectors such as DeFi, SocialFi, SportsFi, ConsumerFi, RWAs, and beyond.<br>
                     <br>Our core speciality lies in financial engineering and commercialization, ensuring that startups are equipped with the tools and strategies for sustainable growth and success in the evolving Web3 landscape.
-                </p> -->
+                </p>
             </div>
         </div>
 
@@ -393,52 +394,52 @@
 
 
         // text type in effect:
-        document.addEventListener("DOMContentLoaded", function() {
-            var text = "A Web3 focused incubator dedicated to nurturing startups, anywhere<br>between ideation and those that have raised under $3 million.<br><br>" +
-                    "We embrace a build till success methodology with a cross-niche<br>approach, drawing valuable insights across sectors such as DeFi,<br>SocialFi, SportsFi, ConsumerFi, RWAs, and beyond.<br><br>" +
-                    "Our core specialty lies in financial engineering and commercialization,<br>ensuring that startups are equipped with the tools and strategies for<br>sustainable growth and success in the evolving Web3 landscape.";
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     var text = "A Web3 focused incubator dedicated to nurturing startups, anywhere<br>between ideation and those that have raised under $3 million.<br><br>" +
+        //             "We embrace a build till success methodology with a cross-niche<br>approach, drawing valuable insights across sectors such as DeFi,<br>SocialFi, SportsFi, ConsumerFi, RWAs, and beyond.<br><br>" +
+        //             "Our core specialty lies in financial engineering and commercialization,<br>ensuring that startups are equipped with the tools and strategies for<br>sustainable growth and success in the evolving Web3 landscape.";
             
-            var paragraph = document.getElementById("typing-paragraph");
-            var speed = 20; // Speed of typing effect (milliseconds per character)
-            var hasStarted = false; // To ensure the animation only starts once
+        //     var paragraph = document.getElementById("typing-paragraph");
+        //     var speed = 20; // Speed of typing effect (milliseconds per character)
+        //     var hasStarted = false; // To ensure the animation only starts once
 
-            // Function to start the typing effect
-            function startTypingEffect() {
-                if (!hasStarted) { // Prevents the animation from starting multiple times
-                    hasStarted = true;
-                    paragraph.style.opacity = 1; // Fade in the paragraph
+        //     // Function to start the typing effect
+        //     function startTypingEffect() {
+        //         if (!hasStarted) { // Prevents the animation from starting multiple times
+        //             hasStarted = true;
+        //             paragraph.style.opacity = 1; // Fade in the paragraph
                     
-                    let i = 0;
-                    function typeWriter() {
-                        if (i < text.length) {
-                            if (text.charAt(i) === '<') {
-                                // Handle the <br> tags as a whole string
-                                paragraph.innerHTML += '<br>';
-                                i += 4; // Skip over "<br>"
-                            } else {
-                                paragraph.innerHTML += text.charAt(i);
-                                i++;
-                            }
-                            setTimeout(typeWriter, speed);
-                        }
-                    }
-                    typeWriter();
-                }
-            }
+        //             let i = 0;
+        //             function typeWriter() {
+        //                 if (i < text.length) {
+        //                     if (text.charAt(i) === '<') {
+        //                         // Handle the <br> tags as a whole string
+        //                         paragraph.innerHTML += '<br>';
+        //                         i += 4; // Skip over "<br>"
+        //                     } else {
+        //                         paragraph.innerHTML += text.charAt(i);
+        //                         i++;
+        //                     }
+        //                     setTimeout(typeWriter, speed);
+        //                 }
+        //             }
+        //             typeWriter();
+        //         }
+        //     }
 
-            // Create an IntersectionObserver
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        startTypingEffect();
-                        observer.unobserve(entry.target); // Stop observing once the animation starts
-                    }
-                });
-            });
+        //     // Create an IntersectionObserver
+        //     var observer = new IntersectionObserver(function(entries) {
+        //         entries.forEach(function(entry) {
+        //             if (entry.isIntersecting) {
+        //                 startTypingEffect();
+        //                 observer.unobserve(entry.target); // Stop observing once the animation starts
+        //             }
+        //         });
+        //     });
 
-            // Observe the container div
-            observer.observe(document.getElementById("typing-container"));
-        });
+        //     // Observe the container div
+        //     observer.observe(document.getElementById("typing-container"));
+        // });
 
 
 
@@ -483,6 +484,10 @@
             });
         });
 
+
+
+    // Navigation bar magnetic effect script:
+        const link = document.querySelectorAll('header > . hover-this')
 
 
 

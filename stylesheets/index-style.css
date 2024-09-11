@@ -173,7 +173,7 @@ body {
 }
 .section-titles {
     text-decoration: none;
-    color: rgb(90, 90, 90);
+    color: var(--blue-white);
     font-size: 0.7vw;
     transition: color 0.3s ease;
     cursor: none;
@@ -212,6 +212,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .landing-content {
     text-align: center;
@@ -259,6 +260,36 @@ body {
         opacity: 1;
     }
 }
+.scroll-mouse {
+    width: 30px;
+	height: 50px;
+	border: 3px solid var(--green_color);
+	border-radius: 60px;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+	&::before {
+		content: '';
+		width: 5px;
+		height: 5px;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: var(--green_color);
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 1s infinite;
+	}
+}
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 40px;
+	}
+}
+
 
 
 
@@ -517,10 +548,10 @@ body {
     line-height: 1.5em;
 }
 
-/* .wwa-par {
+.wwa-par {
     font-size: 1.7vw;
-    font-weight: 300;
-} */
+    font-weight: 400;
+}
 
 
 
@@ -587,7 +618,7 @@ body {
     transition: all 0.3s ease-out;
 }
 .card:hover .service-card-conent {
-    color: var(--navy_color);
+    color: var(--green_color);
 }
 .button-card-conent {
     text-decoration: none;
@@ -605,7 +636,7 @@ body {
 .bt-card:hover .os-button-title {
     color: var(--navy_color);
 }
-.card::before {
+/* .card::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -624,7 +655,7 @@ body {
     height: 200%;
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
-}
+} */
 .bg-shape-container {
     position: absolute;
     top: 100px;
