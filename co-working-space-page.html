@@ -98,9 +98,77 @@
 
     <!-- companies in office -->
     <div class="campnies-section">
-
+        <h2 class="coworking-collab-title">Where Blockchain Innovators Converge</h2>
+        <p class="coworking-collab-par">Join our vibrant Web3 community in Cape Town, where you can collaborate with entrepreneurs, DAS portfolio companies, and visiting Web3 nomads. Boost your productivity with high-speed Wi-Fi, modern conference rooms, and a refreshment bar. Enjoy games like table tennis, air hockey, and foosball, and network at exclusive events on our rooftop terrace.</p>
+        <div class="collab-companies-cards">
+            <a href="https://example.com/opsfi" class="collab-card-link">
+                <div class="collab-card-container">
+                    <img src="./assets/Opsfi_logo.png" alt="OPSFI" class="collab-logo">
+                    <p class="collab-card-par">Empowering visionary founders with expert financial guidance for Web3 innovation and global impact</p>
+                </div>
+            </a>
+            <a href="https://example.com/envio" class="collab-card-link">
+                <div class="collab-card-container">
+                    <img src="./assets/Envio-logo.svg" alt="ENVIO" class="collab-logo">
+                    <p class="collab-card-par">Empowering developers with real-time indexing solutions for EVM-compatible blockchains</p>
+                </div>
+            </a>
+            <a href="https://example.com/momint" class="collab-card-link">
+                <div class="collab-card-container">
+                    <img src="./assets/Momint_logo.png" alt="MOMINT" class="collab-logo">
+                    <p class="collab-card-par">Empowering accessible solar investments and renewable energy solutions through blockchain technology</p>
+                </div>
+            </a>
+        </div>
     </div>
 
+
+
+    <!-- Contact Us section -->
+    <div class="contact-us-section section" id="send-us-memes">
+        <div class="cu-upper-content" >
+            <div class="cu-title">SEND <span class="highlight">US</span> MEMES</div>
+        </div>
+        <div class="social-media-links">
+            <a href="https://www.linkedin.com/company/digital-asset-studios/" target="_blank" >
+                <img src="./assets/linkedin-icon.svg" alt="linked In icon" class="social-media-icon">
+            </a>
+        </div>
+        <div class="cu-down-content">
+            <form action="" class="contact-form">
+                <div class="form-content">
+                    <div class="input-container">
+                        <input id="firstname" class="input" type="text" placeholder=" " required>
+                        <div class="cut"></div>
+                        <label for="firstname" class="placeholder">First Name</label>
+                    </div>
+                    <div class="input-container">
+                        <input id="lastname" class="input" type="text" placeholder=" " required>
+                        <div class="cut"></div>
+                        <label for="lastname" class="placeholder">Last Name</label>
+                    </div>
+                    <div class="input-container full-length">
+                        <input id="email" class="input" type="text" placeholder=" " required>
+                        <div class="cut cut-short"></div>
+                        <label for="firstname" class="placeholder">Email</label>
+                    </div>
+                    <div class="input-container full-length">
+                        <input id="subject" class="input" type="text" placeholder=" ">
+                        <div class="cut cut-short"></div>
+                        <label for="subject" class="placeholder">Subject</label>
+                    </div>
+                    <div class="input-container message-sizing">
+                        <input id="message" class="input" type="text" placeholder=" " required>
+                        <div class="cut"></div>
+                        <label for="message" class="placeholder">Message</label>
+                    </div>
+                </div>
+                <button class="form-submit-bt hoverable glow-on-hover">
+                    <span class="form-bt-text">SEND</span>
+                </button>
+            </form>
+        </div>
+    </div>
 
 
 
@@ -248,6 +316,34 @@
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
         });
+
+
+
+    // script for hovering cards titling:
+        // const cards = document.querySelectorAll('.collab-card-container');
+
+        // cards.forEach((card) => {
+        //     card.addEventListener('mousemove', (event) => {
+        //         const cardRect = card.getBoundingClientRect();
+        //         const cardWidth = cardRect.width;
+        //         const cardHeight = cardRect.height;
+        //         const centerX = cardRect.left + cardWidth / 2;
+        //         const centerY = cardRect.top + cardHeight / 2;
+        //         const mouseX = event.clientX;
+        //         const mouseY = event.clientY;
+                
+        //         // Increase the tilt effect by adjusting the multiplier (20 in this case)
+        //         const rotateX = (mouseY - centerY) / (cardHeight / 2) * 20;
+        //         const rotateY = (mouseX - centerX) / (cardWidth / 2) * -20;
+
+        //         card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        //     });
+
+        //     card.addEventListener('mouseleave', () => {
+        //         card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+        //     });
+        // });
+
 
     </script>
 
