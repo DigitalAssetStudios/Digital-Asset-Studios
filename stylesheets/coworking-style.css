@@ -185,7 +185,7 @@ body {
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -60.5%);
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -196,69 +196,50 @@ body {
 
 /* office space style */
 .office-space-container {
-    width: 100vw;
-    height: 110vh;
-    background-color: var(--green_color);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--green_color);
+    padding: 20px;
 }
 .space-text-container {
-    text-align: center;
-    margin: 6vw 0 0 0;
+    flex: 1;
+    position: sticky;
+    top: 20vh;
+    margin-right: 20px;
+    padding: 40px;
+    background-color: var(--navy_color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: var(--white-color);
 }
-.space-text-container h2 {
-    color: var(--navy_color);
-    font-size: 3vw;
-    margin: 0 0 20px 0;
+.space-title {
+    font-size: 4vw;
 }
-.space-text-container p {
-    color: var(--navy_color);
-    margin: 0 0 20px 0;
-    font-size: 1.2vw;
-}
-.space-img-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 800px;
-    padding-top: 20px;
-    transition: transform 0.3s ease 0s;
-}
-#img-1 {
-    position: absolute;
-    width: 500px;
-    right: -20px;
-}
-#img-1:hover {
-    z-index: 1;
-    width: 550px;
-}
-#img-2 {
-    position: absolute;
-    width: 500px;
-    left: 5px;
-    top: 60px;
-}
-#img-2:hover {
-    z-index: 1;
-    width: 550px;
-}
-#img-3 {
-    position: absolute;
-    width: 400px;
-    top: 250px;
-    right: -130px;
-}
-#img-3:hover {
-    z-index: 1;
-    width: 450px;
+.space-par {
+    font-size: 2vw;
+    width: 85%;
 }
 .cape-town-link {
     text-decoration: none;
-    color: var(--green);
+    color: var(--white-color);
+}
+.space-img-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.img-card {
+    padding: 5px;
+    background-color: var(--navy_color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.img-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 
