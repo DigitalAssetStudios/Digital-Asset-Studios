@@ -886,3 +886,90 @@ body {
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+
+
+
+/* Media Quesries for Phone Devices: */
+@media (max-width: 480px) {
+
+    /* Navigation Bar: */
+
+
+
+    /* Landing sectiong: */
+    .landing-section {
+        height: 85vh;
+        width: 100vw;
+    }
+    .page-title {
+        font-size: 7vw;
+    }
+    @keyframes reveal {
+        80%{
+            letter-spacing: 4px;
+        }
+        100% {
+            background-size: 300% 300%;
+        }
+    }
+    .page-tagline {
+        font-size: 3vw;
+    }
+    .page-das-logo {
+        width: 15vw;
+    }
+    .scroll-mouse {
+        bottom: -50px;
+        border-radius: 5px;
+    }
+
+
+
+    /* Who We Are Section */
+    .who-we-are-section {
+        height: 100vh;
+        width: 100vw;
+    }
+    .wwa-title {
+        font-size: 10vw;
+    }
+    .wwa-par {
+        font-size: 5vw;
+    }
+
+
+
+    /* Our Service section */
+    .our-service-section {
+        height: 100vh;
+        width: 100vw;
+    }
+    .service-title {
+        font-size: 7vw;
+        margin: 0 0 30px 0;
+    }
+    .service-card-container {
+        display: grid;
+        grid-gap: max(10px ,calc(10 / var(--messurments)* 100vw));
+    }
+    .card {
+        padding: 0px;
+    }
+    .card-title {
+        font-size: 4vw;
+        margin: 30px 0 10px 0;
+    }
+    .card-par {
+        font-size: 3vw;
+        margin: 0 20px 30px 20px;
+    }
+    .bg-shape-container {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
