@@ -481,3 +481,94 @@ body {
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+
+
+/* Media Quesries for Phone Devices: */
+@media (max-width: 480px) {
+
+    /* Landing section */
+    .landing-section {
+        height: 100vh;
+        width: 100vw;
+    }
+    .landing-text-title {
+        font-size: 9vw;
+    }
+    .landing-text-tagline {
+        font-size: 5vw;
+    }
+    #earthCanvas {
+        transform: translate(-50%, -70.3%);
+    }
+
+
+
+    /* office space section: */
+    .office-space-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: var(--green_color);
+        padding: 20px;
+    }
+    .space-text-container {
+        top: 10vh;
+    }
+    .space-title {
+        font-size: 6vw;
+        margin: 0px 0;
+    }
+    .space-par {
+        font-size: 3vw;
+        width: 100%;
+        margin: 5px 0;
+    }
+    .img-card {
+        padding: 5px;
+        background-color: var(--navy_color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .img-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+
+
+    /* companies in office section */
+    .campnies-section {
+        width: 100vw;
+        height: 100vh;
+    }
+    .coworking-collab-title {
+        font-size: 7vw;
+        margin: 10px;
+    }
+    .coworking-collab-par {
+        font-size: 3vw;
+        width: 90%;
+        margin: 0 0 10px 0;
+    }
+    .collab-companies-cards {
+        margin: 20px 0 0 0;
+        gap: 1rem;
+    }
+    .collab-card-container {
+        background-color: var(--white-color);
+        width: 30vw;
+        height: 40vh;
+        padding: 0.5rem;
+        color: var(--navy_color);
+    }
+    .collab-logo {
+        width: 23vw;
+        margin: 20px 0;
+    }
+    .collab-card-par {
+        margin: 0 5px;
+        font-size: 3vw;
+    }
+}

@@ -698,3 +698,260 @@ body {
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+
+
+/* Media Quesries for Phone Devices: */
+@media (max-width: 480px) {
+    
+    /* Landing section: */
+    .landing-section {
+        width: 100vw;
+        height: 100vh;
+    }
+    .landing-content {
+        margin: 20vh 0 30vh 0;
+    }
+    .page-title {
+        font-size: 8vw;
+    }
+    .page-sub-title {
+        font-size: 6vw;
+    }
+    .page-tagline {
+        font-size: 4vw;
+    }
+    .scroll-indicator-button {
+        font-size: 0.9rem;
+    }
+
+
+
+    /* Roadmap section: */
+    .roadmap-section {
+        width: 100vw;
+        height: 150vh;
+    }
+    .line {
+        position: absolute;
+        background-color: var(--white-color);
+        box-shadow: 0px 0px 12px var(--white-color);
+        width: 4px;
+        height: 180vh;
+        bottom: 0;
+        left: 50%;
+        overflow: hidden;
+    }
+    .scanner-pulse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--green_color);
+        width: 100%;
+        height: 50px;
+        border-radius: 50%;
+        animation: scanner-loop 3s ease-in-out infinite;
+        filter: blur(1px);
+    }
+    .roadmap-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+    }
+    .roadmap-header {
+        width: 70%;
+        text-align: center;
+    }
+    .rm-header-text {
+        font-size: 6vw;
+    }
+    .animate {
+        .rm-header-text {
+            animation: scaleText 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+        }
+        .rm-header-text span {
+            animation: fade-in 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+        .rm-header-text span:nth-child(1) {
+            animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+        .rm-header-text span:nth-child(2) {
+            animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+        .rm-header-text span:nth-child(3) {
+            animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+        .rm-header-text span:nth-child(4) {
+            animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+        .rm-header-text span:nth-child(5) {
+            animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+        .rm-header-text span:nth-child(6) {
+            animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+    }
+    .card-content {
+        padding: 0 20px;
+        margin: 10px 30px;
+    }
+    .card-title {
+        font-size: 5vw;
+        float: left;
+    }
+    .card-par {
+        font-size: 3vw;
+    }
+
+
+
+    /* Fundraising Roadmap section */
+    .section-seperated-header {
+        width: 100vw;
+        height: 30vw;
+    }
+    .vert-cards-container-title {
+        font-size: 2rem;
+    }
+    .das-fundraising-section {
+        width: 95vw;
+        height: 300vh;
+    }
+    #vert-cards-container {
+        padding-bottom: calc(var(--numcards) * 5rem);
+        margin-bottom: 5vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(var(--numcards), 40vh);
+        gap: 5vh;
+    }
+    .vert-card {
+        position: sticky;
+        top: 0;
+        padding-top: 5vw;
+        transform-origin: 50% 0%;
+        will-change: transform;
+    }
+    .vert-card-content {
+        box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+        background: var(--white-color);
+        color: var(--navy_color);
+        border-radius: 1rem;
+        overflow: hidden;
+        display: grid;
+        grid-template-areas: "text img";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: stretch;
+    }
+    .vert-card-text {
+        grid-area: text;
+        width: 80%;
+        place-self: center;
+        text-align: left;
+        display: grid;
+        gap: 1em;
+        place-items: start;
+    }
+    .vert-card-content > figure {
+        grid-area: img;
+        overflow: hidden;
+    }
+    .vert-card-content > figure > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .vert-card-header {
+        font-size: 1em;
+    }
+    .vert-card-par {
+        font-size: 4vw;
+    }
+
+
+
+    /* DAS Offering section */
+    .das-offering-section {
+        width: 100vw;
+        height: 100vh;
+    }
+    .carousel-nav {
+        gap: 5px;
+    }
+    .carousel-nav-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        height: 58px;
+        padding: 8px 16px;
+        border-radius: 25px;
+        color: var(--navy_color);
+        background-color: var(--white-color);
+        user-select: none;
+    }
+    .carousel-title {
+        font-size: 1rem;
+    }
+    .carousel-nav-icon {
+        width: 30px;
+    }
+    .carousel-arrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 50px;
+        background-color: var(--white-color);
+        border: none;
+        border-radius: 25px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+        pointer-events: all;
+    }
+    .carousel-arrow:hover {
+        background-color: var(--green_color);
+        cursor: none;
+    }
+    .arrow {
+        display: block;
+        width: 0; 
+        height: 0; 
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+    .arrow-left {
+        border-right: 10px solid var(--navy_color);
+    }
+    .arrow-right {
+        border-left: 10px solid var(--navy_color);
+    }
+    .carousel-container {
+        width: 200%;
+        padding-block: 16px 32px;
+        margin: 16px 32px;
+        overflow-x: auto;
+        display: flex;
+        width: 100%;
+        gap: 28px;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+    }
+    .carousel-slide {
+        flex: 1 0 70%;
+    }
+    .offer-stage-title {
+        font-size: 1.5rem;
+    }
+    .offer-stage-par {
+        font-size: 1rem;
+    }
+
+
+
+    /* Contact us section */
+}
