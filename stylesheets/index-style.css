@@ -726,7 +726,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--navy_color); */
 }
 .cu-upper-content {
     height: 56%;
@@ -746,7 +745,6 @@ body {
     align-items: center;
     padding: 0 0 0 20px;
     margin: 0 0 0 0;
-    /* justify-content: center; */
 }
 .social-media-icon {
     width: 30px;
@@ -1202,6 +1200,9 @@ body {
     }
     .full-length {
         grid-column: span 0;
+    }
+    .mobile-full-length {
+        grid-column: span 2;
     }
     .message-sizing {
         grid-column: span 0;

@@ -351,6 +351,9 @@ body {
 .vert-cards-container-title {
     font-family: var(--main-font);
     font-size: 7rem;
+    position: sticky;
+    top: 5vw;
+    margin: 0;
 }
 .das-fundraising-section {
     width: 80vw;
@@ -368,8 +371,8 @@ body {
 }
 .vert-card {
     position: sticky;
-    top: 0;
-    padding-top: 5vw;
+    top: 13vw;
+    padding-top: 0;
     transform-origin: 50% 0%;
     will-change: transform;
 }
@@ -937,32 +940,56 @@ body {
 
 
     /* Fundraising Roadmap section */
-    .section-seperated-header {
-        width: 100vw;
-        height: 30vw;
-    }
     .vert-cards-container-title {
-        font-size: 2rem;
+        font-size: 6vw;
+    }
+    .das-fundraising-section {
+        height: auto; /* Adjust height for horizontal scrolling */
+        overflow-x: scroll; /* Enable horizontal scrolling */
+        overflow-y: hidden; /* Disable vertical scrolling */
+        white-space: nowrap; /* Prevent items from wrapping */
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
     }
     #vert-cards-container {
-        gap: 50vh;
+        display: inline-block; /* Change to inline for horizontal layout */
+        grid-template-columns: repeat(var(--numcards), 80vw); /* Set cards horizontally */
+        grid-template-rows: 1fr; /* Make a single row */
+        gap: 5vw; /* Adjust the gap between cards */
+        padding-bottom: 0;
+    }
+    .vert-card {
+        width: 80vw; /* Adjust card width to fit smaller screens */
+        display: inline-block; /* Align items horizontally */
+        transform: none; /* Remove sticky behavior for horizontal layout */
+        padding-top: 0; /* Remove vertical padding */
     }
     .vert-card-content {
-        display: flex;
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        text-align: center; /* Center text */
+        height: 70vh; /* Ensure consistent height */
+    }
+    .vert-card-text {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        display: flex; /* Use flexbox to center */
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
-    }
-    .vert-card-content > figure {
-        display: none;
-    }
-    .vert-card-text {
-        width: 100%;
-        place-items: center;
     }
     .vert-card-header {
-        font-size: 2rem;
+        font-size: 6vw;
+    }
+    .vert-card-par {
+        width: 80%;
+        white-space: wrap;
+    }
+    .vert-card-content > figure {
+        display: none; /* Hide the image */
     }
 
 
@@ -1107,6 +1134,9 @@ body {
     }
     .full-length {
         grid-column: span 0;
+    }
+    .mobile-full-length {
+        grid-column: span 2;
     }
     .message-sizing {
         grid-column: span 0;

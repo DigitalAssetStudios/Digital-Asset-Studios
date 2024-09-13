@@ -770,6 +770,9 @@ body {
     .full-length {
         grid-column: span 0;
     }
+    .mobile-full-length {
+        grid-column: span 2;
+    }
     .message-sizing {
         grid-column: span 0;
         grid-row: span 2;
