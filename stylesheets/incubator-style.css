@@ -351,9 +351,9 @@ body {
 .vert-cards-container-title {
     font-family: var(--main-font);
     font-size: 7rem;
-    position: sticky;
+    /* position: sticky;
     top: 5vw;
-    margin: 0;
+    margin: 0; */
 }
 .das-fundraising-section {
     width: 80vw;
@@ -941,7 +941,7 @@ body {
 
     /* Fundraising Roadmap section */
     .vert-cards-container-title {
-        font-size: 6vw;
+        font-size: 7vw;
     }
     .das-fundraising-section {
         height: auto; /* Adjust height for horizontal scrolling */
@@ -956,8 +956,8 @@ body {
         display: inline-block; /* Change to inline for horizontal layout */
         grid-template-columns: repeat(var(--numcards), 80vw); /* Set cards horizontally */
         grid-template-rows: 1fr; /* Make a single row */
-        gap: 5vw; /* Adjust the gap between cards */
-        padding-bottom: 0;
+        padding: 0;
+        gap: 5vw;
     }
     .vert-card {
         width: 80vw; /* Adjust card width to fit smaller screens */
@@ -1062,7 +1062,8 @@ body {
         scroll-snap-type: x mandatory;
     }
     .carousel-slide {
-        flex: 1 0 70%;
+        flex: 1 0 80%;
+        height: 65vh;
     }
     .offer-stage-title {
         font-size: 1.5rem;

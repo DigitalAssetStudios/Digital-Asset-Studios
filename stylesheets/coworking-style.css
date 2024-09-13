@@ -633,7 +633,7 @@ body {
         font-size: 5vw;
     }
     #earthCanvas {
-        transform: translate(-50%, -70.3%);
+        transform: translate(-50%, -56%);
     }
 
 
@@ -641,6 +641,7 @@ body {
     /* office space section: */
     .office-space-container {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
         background-color: var(--green_color);
@@ -648,13 +649,14 @@ body {
     }
     .space-text-container {
         top: 10vh;
+        width: 100%;
     }
     .space-title {
         font-size: 6vw;
-        margin: 0px 0;
+        margin: 0;
     }
     .space-par {
-        font-size: 3vw;
+        font-size: 4vw;
         width: 100%;
         margin: 5px 0;
     }
@@ -679,7 +681,7 @@ body {
     }
     .coworking-collab-title {
         font-size: 7vw;
-        margin: 10px;
+        margin: 10px 0 0 0;
     }
     .coworking-collab-par {
         font-size: 3vw;
@@ -687,8 +689,8 @@ body {
         margin: 0 0 10px 0;
     }
     .collab-companies-cards {
-        margin: 20px 0 0 0;
-        gap: 1rem;
+        margin: 10px 0 0 0;
+        gap: 0.5rem;
     }
     .collab-card-container {
         background-color: var(--white-color);
@@ -698,7 +700,7 @@ body {
         color: var(--navy_color);
     }
     .collab-logo {
-        width: 23vw;
+        width: 15vw;
         margin: 20px 0;
     }
     .collab-card-par {
