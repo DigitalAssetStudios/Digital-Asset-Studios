@@ -206,11 +206,40 @@ body {
     padding: 0;
     cursor: none;
 }
+.scroll-mouse {
+    width: 30px;
+	height: 50px;
+	border: 3px solid var(--green_color);
+	border-radius: 60px;
+    position: absolute;
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+	&::before {
+		content: '';
+		width: 5px;
+		height: 5px;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: var(--green_color);
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 1s infinite;
+	}
+}
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 40px;
+	}
+}
 
 
 
 /* roadmap section style */
-.roadmap-section {
+/* .roadmap-section {
     position: relative;
     width: 100vw;
     height: 150vh;
@@ -327,15 +356,86 @@ body {
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.5s ease-out, transform 2s ease-out;
-}
+} */
 /* Animation for when card-content becomes visible */
-.card-content.in-view {
+/* .card-content.in-view {
     opacity: 1;
     transform: translateY(0);
 }
 .card-title {
     font-size: 2vw;
     float: left;
+} */
+
+.timeline-roadmap-section {
+    height: 300vh;
+    width: 100vw;
+}
+.timeline-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.t-r-s-title {
+    color: var(--green_color);
+    font-size: 3vw;
+    margin: 20vh 0 0 0;
+}
+.t-r-s-tagline {
+    font-size: 1.5vw;
+}
+.timeline-line-container {
+    position: relative;
+    height: 100%;
+}
+.scroll-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: var(--green_color, #ffffff);
+}
+.timeline-cards-container {
+    position: relative;
+    top: 10vh;
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.timeline-card {
+    width: 40%;
+    padding: 20px;
+    background-color: var(--blue-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20vh;
+    position: relative;
+    text-align: center;
+}
+.timeline-card-title {
+    color: var(--green_color);
+    font-size: 2vw;
+    margin: 0;
+}
+.timeline-card-par {
+    color: var(--navy_color);
+    font-size: 1vw;
+}
+.left-card {
+    align-self: flex-start;
+    margin-left: 10%;
+}
+.right-card {
+    align-self: flex-end;
+    margin-right: -25%;
+}
+.card-content {
+    text-align: center;
 }
 
 
