@@ -1,7 +1,7 @@
 /* Defined Variable */
 :root {
     --navy_color: rgba(25, 30, 41, 1);
-    --green_color: rgba(1, 195, 141, 1);
+    --green_color: #01c38d;
     --white-color: rgba(245, 248, 255, 1);
     --blue-white: rgba(235, 241, 255, 1);
     --main-font: "Black Future", "sans-serif";
@@ -197,6 +197,11 @@ body {
 .section-titles:active {
     color: var(--green_color);
 }
+.active-link {
+    color: var(--green_color);
+    font-weight: bold;
+    font-size: 1vw;
+}
 
 
 
@@ -333,9 +338,6 @@ body {
 	background: var(--green_color);
 	border-radius: 40% 50% 30% 40%;
 	opacity: 0.7;
-	/* position: absolute; */
-	/* left: 75%; */
-	/* top: 40%; */
 }
 .one {
 	height: 250px;
@@ -539,7 +541,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--navy_color); */
 }
 .wwa-content {
     text-align: center;
@@ -549,19 +550,19 @@ body {
     font-size: 5vw;
     font-family: var(--main-font);
 }
-
-#typing-paragraph {
-    font-family: var(--sup-font), sans-serif;
-    font-size: 1.7vw;
-    color: var(--white-color);
-    opacity: 0;
-    transition: opacity 500ms ease-in-out; /* Fade in the paragraph before typing starts */
-    line-height: 1.5em;
-}
-
 .wwa-par {
     font-size: 1.7vw;
     font-weight: 400;
+}
+.wwa-par span {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.6s ease, color 0.6s ease;
+    color: lightgrey;
+}
+.wwa-par span.visible {
+    opacity: 1; /* Fully visible */
+    color: white; /* End color */
 }
 
 
@@ -647,26 +648,6 @@ body {
 .bt-card:hover .os-button-title {
     color: var(--navy_color);
 }
-/* .card::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color: var(--green_color);
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 1s ease, opacity 1s ease;
-    opacity: 0;
-    z-index: -1;
-}
-.card:hover::before {
-    width: 200%;
-    height: 200%;
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-} */
 .bg-shape-container {
     position: absolute;
     top: 100px;

@@ -8,8 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./assets/green-das-logo.svg">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
     <title>Digital Asset Studios</title>
 </head>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBJKC9FR28"></script>
     <script>
@@ -20,7 +26,7 @@
         gtag('config', 'G-TBJKC9FR28');
     </script>
 <body>
-    
+
     <!-- Custome Mouse Cursor -->
     <div class="custom-mouse-cursor">
         <div class="cursor-shape cursor-big-shape"></div>
@@ -131,19 +137,27 @@
 
 
         <!-- Who We Are section -->
-        <div class="who-we-are-section section" id="typing-container">
+        <!-- <div class="who-we-are-section section" id="typing-container">
             <div class="wwa-content">
                 <div class="wwa-title">WHO <span class="highlight">WE</span> ARE</div>
-
-                <!-- <p id="typing-paragraph"></p> -->
-
                 <p class="wwa-par">
                     A Web3 focused incubator dedicated to nurturing startups, anywhere between ideation and those that have raised under $3 milion.<br>
                     <br>We embrace a build till success methodology with a cross-niche approach, drawing valuable insights across sectors such as DeFi, SocialFi, SportsFi, ConsumerFi, RWAs, and beyond.<br>
                     <br>Our core speciality lies in financial engineering and commercialization, ensuring that startups are equipped with the tools and strategies for sustainable growth and success in the evolving Web3 landscape.
                 </p>
             </div>
+        </div> -->
+        <div class="who-we-are-section section" id="typing-container">
+            <div class="wwa-content">
+                <div class="wwa-title">WHO <span class="highlight">WE</span> ARE</div>
+                <p class="wwa-par">
+                    <span>A</span> <span>Web3</span> <span>focused</span> <span>incubator</span> <span>dedicated</span> <span>to</span> <span>nurturing</span> <span>startups,</span> <span>anywhere</span> <span>between</span> <span>ideation</span> <span>and</span> <span>those</span> <span>that</span> <span>have</span> <span>raised</span> <span>under</span> <span>$3</span> <span>million.</span><br>
+                    <br><span>We</span> <span>embrace</span> <span>a</span> <span>build</span> <span>till</span> <span>success</span> <span>methodology</span> <span>with</span> <span>a</span> <span>cross-niche</span> <span>approach,</span> <span>drawing</span> <span>valuable</span> <span>insights</span> <span>across</span> <span>sectors</span> <span>such</span> <span>as</span> <span>DeFi,</span> <span>SocialFi,</span> <span>SportsFi,</span> <span>ConsumerFi,</span> <span>RWAs,</span> <span>and</span> <span>beyond.</span><br>
+                    <br><span>Our</span> <span>core</span> <span>speciality</span> <span>lies</span> <span>in</span> <span>financial</span> <span>engineering</span> <span>and</span> <span>commercialization,</span> <span>ensuring</span> <span>that</span> <span>startups</span> <span>are</span> <span>equipped</span> <span>with</span> <span>the</span> <span>tools</span> <span>and</span> <span>strategies</span> <span>for</span> <span>sustainable</span> <span>growth</span> <span>and</span> <span>success</span> <span>in</span> <span>the</span> <span>evolving</span> <span>Web3</span> <span>landscape.</span>
+                </p>
+            </div>
         </div>
+        
 
 
 
@@ -414,96 +428,48 @@
         });
 
 
-        // text type in effect:
-        // document.addEventListener("DOMContentLoaded", function() {
-        //     var text = "A Web3 focused incubator dedicated to nurturing startups, anywhere<br>between ideation and those that have raised under $3 million.<br><br>" +
-        //             "We embrace a build till success methodology with a cross-niche<br>approach, drawing valuable insights across sectors such as DeFi,<br>SocialFi, SportsFi, ConsumerFi, RWAs, and beyond.<br><br>" +
-        //             "Our core specialty lies in financial engineering and commercialization,<br>ensuring that startups are equipped with the tools and strategies for<br>sustainable growth and success in the evolving Web3 landscape.";
-            
-        //     var paragraph = document.getElementById("typing-paragraph");
-        //     var speed = 20; // Speed of typing effect (milliseconds per character)
-        //     var hasStarted = false; // To ensure the animation only starts once
 
-        //     // Function to start the typing effect
-        //     function startTypingEffect() {
-        //         if (!hasStarted) { // Prevents the animation from starting multiple times
-        //             hasStarted = true;
-        //             paragraph.style.opacity = 1; // Fade in the paragraph
-                    
-        //             let i = 0;
-        //             function typeWriter() {
-        //                 if (i < text.length) {
-        //                     if (text.charAt(i) === '<') {
-        //                         // Handle the <br> tags as a whole string
-        //                         paragraph.innerHTML += '<br>';
-        //                         i += 4; // Skip over "<br>"
-        //                     } else {
-        //                         paragraph.innerHTML += text.charAt(i);
-        //                         i++;
-        //                     }
-        //                     setTimeout(typeWriter, speed);
-        //                 }
-        //             }
-        //             typeWriter();
-        //         }
-        //     }
-
-        //     // Create an IntersectionObserver
-        //     var observer = new IntersectionObserver(function(entries) {
-        //         entries.forEach(function(entry) {
-        //             if (entry.isIntersecting) {
-        //                 startTypingEffect();
-        //                 observer.unobserve(entry.target); // Stop observing once the animation starts
-        //             }
-        //         });
-        //     });
-
-        //     // Observe the container div
-        //     observer.observe(document.getElementById("typing-container"));
-        // });
-
-
-
-
-        // page indicator highloghting script:
-        document.addEventListener('DOMContentLoaded', function () {
-            const sectionLinks = document.querySelectorAll('.section-titles');
-            const sections = document.querySelectorAll('.section');
-
-            const options = {
-                root: null, // viewport
-                rootMargin: '0px',
-                threshold: 0.5 // 50% of the section must be in view
-            };
-
-            // Remove active class from all links
-            function removeActiveClass() {
-                sectionLinks.forEach(link => {
-                    link.classList.remove('active');
-                });
-            }
-
-            // Add active class to the link corresponding to the section in view
-            function addActiveClass(entry) {
-                const id = entry.target.id;
-                const activeLink = document.querySelector(`a[href="#${id}"]`);
-                removeActiveClass();
-                activeLink.classList.add('active');
-            }
+    // page indicator highloghting script:
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".section");
+            const navLinks = document.querySelectorAll(".section-titles");
+            const landingSection = document.querySelector(".landing-section");
 
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
+                entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        addActiveClass(entry);
+                        // If landing section is visible, remove all highlights
+                        if (entry.target === landingSection) {
+                            navLinks.forEach((link) => {
+                                link.classList.remove("active-link");
+                            });
+                        } else {
+                            // Remove 'active-link' from all links
+                            navLinks.forEach((link) => {
+                                link.classList.remove("active-link");
+                            });
+
+                            // Add 'active-link' to the corresponding link
+                            const activeLink = document.querySelector(`a[href="#${entry.target.id}"]`);
+                            activeLink.classList.add("active-link");
+                        }
                     }
                 });
-            }, options);
+            }, {
+                threshold: 0.7 // Adjust this value as needed
+            });
 
-            // Observe each section
-            sections.forEach(section => {
+            sections.forEach((section) => {
                 observer.observe(section);
             });
+
+            // Observe the landing section as well
+            observer.observe(landingSection);
         });
+
+
+
+    // text revealing script:
 
 
 
