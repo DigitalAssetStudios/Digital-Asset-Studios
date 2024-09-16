@@ -368,7 +368,7 @@ body {
 } */
 
 .timeline-roadmap-section {
-    height: 300vh;
+    height: 250vh;
     width: 100vw;
 }
 .timeline-title-container {
@@ -409,9 +409,10 @@ body {
 }
 .timeline-card {
     width: 40%;
+    height: 20vh;
     padding: 20px;
     background-color: var(--blue-white);
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20vh;
     position: relative;
@@ -428,11 +429,11 @@ body {
 }
 .left-card {
     align-self: flex-start;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 .right-card {
     align-self: flex-end;
-    margin-right: -25%;
+    margin-right: 5%;
 }
 .card-content {
     text-align: center;
