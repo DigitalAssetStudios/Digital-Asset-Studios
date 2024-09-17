@@ -240,7 +240,7 @@ body {
 
 /* roadmap section style */
 .timeline-roadmap-section {
-    height: 250vh;
+    height: 260vh;
     width: 100vw;
 }
 .timeline-title-container {
@@ -337,24 +337,22 @@ body {
 
 
 /* The das fundraising section style */
-.section-seperated-header {
-    width: 100vw;
-    height: 30vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.vert-cards-container-title {
-    font-family: var(--main-font);
-    font-size: 7rem;
-    /* position: sticky;
-    top: 5vw;
-    margin: 0; */
-}
 .das-fundraising-section {
     width: 80vw;
-    height: 480vh;
+    height: 500vh;
     margin: 0 auto;
+}
+.vert-cards-container-title {
+    width: 100%;
+    font-family: var(--main-font);
+    font-size: 6rem;
+    position: sticky;
+    text-align: center;
+    top: 1vw;
+    margin-bottom: 40vh;
+    padding: 50px;
+    color: var(--green_color);
+    background-color: var(--navy_color);
 }
 #vert-cards-container {
     padding-bottom: calc(var(--numcards) * var(--card-top-offset));
@@ -415,7 +413,7 @@ body {
 
 
 /* The DAS Offering section style */
-.das-offering-section {
+/* .das-offering-section {
     width: 100vw;
     height: 100vh;
     background-color: var(--navy_color);
@@ -524,7 +522,102 @@ body {
 .offer-stage-par {
     font-size: 1rem;
     padding: 0 30px;
+} */
+.carousel {
+    position: relative;
+    width: 50vw;
+    max-width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+    background-color: var(--white-color);
+    text-align: center;
+}
+.offer-stage-title {
+    color: var(--green_color);
+    font-size: 3vw;
+}
+.offer-stage-par {
+    color: var(--navy_color);
+}
+.carousel-indicators {
+position: absolute;
+bottom: 10px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+
+.carousel-indicators button {
+width: 10px;
+height: 10px;
+border: none;
+border-radius: 50%;
+background-color: #bbb;
+cursor: pointer;
+}
+
+.carousel-indicators .active {
+background-color: #333;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background: none;
+border: none;
+cursor: pointer;
+}
+
+.carousel-control-prev {
+left: 10px;
+}
+
+.carousel-control-next {
+right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+display: block;
+width: 30px;
+height: 30px;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+content: '';
+width: 12px;
+height: 12px;
+border-width: 2px;
+border-style: solid;
+border-color: white;
+}
+
+.carousel-control-prev-icon::before {
+border-right: none;
+border-bottom: none;
+transform: rotate(45deg);
+}
+
+.carousel-control-next-icon::before {
+border-left: none;
+border-top: none;
+transform: rotate(45deg);
+}
+  
 
 
 

@@ -131,10 +131,8 @@
 
 
     <!-- The DAS Fundraising Roadmap section -->
-    <div class="section-seperated-header">
-        <h2 class="vert-cards-container-title">Fundraising Roadmap</h2>
-    </div>
     <div class="das-fundraising-section">
+        <h2 class="vert-cards-container-title">Fundraising Roadmap</h2>
         <ul id="vert-cards-container">
             <li class="vert-card" id="card_1">
                 <div class="vert-card-content">
@@ -222,11 +220,11 @@
 
 
     <!-- The DAS Offering section -->
-    <div class="das-offering-section">
+    <!-- <div class="das-offering-section">
         <div class="carousel-nav">
             <div class="carousel-nav-left">
                 <img src="./assets/green-das-logo.svg" alt="das-logo" class="carousel-nav-icon">
-                <h3 class="carousel-title">Fundraising Roadmap</h3>
+                <h3 class="carousel-title">The DAS Offering</h3>
             </div>
             <div class="carousel-nav-right">
                 <button aria-controls="carousel-4" aria-label="Previous slide" class="carousel-arrow shrinkable">
@@ -259,6 +257,43 @@
                 <p class="offer-stage-par">We offer a vibrant co-working space in the best street in Cape Town, South Africa (New global hubs coming soon)<br><br>Our space includes high-speed Wi-Fi, meeting areas, refreshments, and a fun zone to spark creativity</p>
             </div>
         </div>
+    </div> -->
+    <div id="carouselExampleIndicators" class="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h3 class="offer-stage-title">Mentor</h3>
+                <p class="offer-stage-par">Our team of experienced advisors become an extension of your leadership, present for the most important moments. A dedicated advisor is allocated to each start-up, but every problem is discussed with the wider team to pool problem solving and achieve insightful impact.<br><br>Think of us as your personal board of directors in the Web3 world.</p>
+            </div>
+            <div class="carousel-item">
+                <h3 class="offer-stage-title">Unmatched Expertise</h3>
+                <p class="offer-stage-par">We don't just talk strategy, we deliver results. Our comprehensive suite of services covers everything from financial engineering and global structuring to fundraising support and talent acquisition. We provide extreme due care with commercial and financial professional services to ensure you have the experts you need to build a solid foundation for your Web3 startup.</p>
+            </div>
+            <div class="carousel-item">
+                <h3 class="offer-stage-title">Unlock Capital</h3>
+                <p class="offer-stage-par">Navigating the Web3 funding landscape can be tricky. We help you secure the right resources, at the right time, by guiding you towards suitable grants, loans, and providing professional application support.<br><br>We'll also prepare you to pitch your vision like a pro and connect you with a network of investors, including angels, VCs, and family offices, who are ready to back you.</p>
+            </div>
+            <div class="carousel-item">
+                <h3 class="offer-stage-title">Network Effect</h3>
+                <p class="offer-stage-par">Gain your advantage through collaboration with other Web3 pioneers, seasoned founders, partners and investors within our ecosystem. A collaborative environment designed to accelerate your innovation & growth.</p>
+            </div>
+            <div class="carousel-item">
+                <h3 class="offer-stage-title">Dedicated Work Space</h3>
+                <p class="offer-stage-par">We offer a vibrant co-working space in the best street in Cape Town, South Africa (New global hubs coming soon)<br><br>Our space includes high-speed Wi-Fi, meeting areas, refreshments, and a fun zone to spark creativity</p>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
 
@@ -491,6 +526,29 @@
 
 
 
+    // horizontal carousel script:
+        const carousel = document.querySelector('.carousel-inner');
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        document.querySelector('.carousel-control-next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+
+        document.querySelector('.carousel-control-prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+
+        document.querySelectorAll('.carousel-indicators button').forEach((button, index) => {
+        button.addEventListener('click', () => {
+            currentIndex = index;
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            document.querySelector('.carousel-indicators .active').classList.remove('active');
+            button.classList.add('active');
+        });
+        });
 
 
 
