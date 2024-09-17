@@ -597,7 +597,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 0;
     border: 0.1px solid var(--green_color);
     border-radius: 30px;
     backdrop-filter: blur(3.7rem);
