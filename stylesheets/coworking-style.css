@@ -321,6 +321,27 @@ body {
     font-size: 1vw;
     transition: 0.5s;
 }
+.cta-cad-text {
+    color: var(--green_color);
+    background: linear-gradient(to right, var(--green_color) 0, var(--navy_color) 10%, var(--green_color) 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-size: 1.4vw;
+    text-decoration: none;
+    white-space: nowrap;
+}
+@keyframes shine {
+    0% {background-position: 0;}
+    60% {background-position: 90px;}
+    100% {background-position: 210px;}
+}
+.collab-card-container:hover .cta-cad-text {
+    transform: scale(1.2);
+}
 
 
 

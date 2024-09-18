@@ -243,7 +243,7 @@ body {
 
 /* roadmap section style */
 .timeline-roadmap-section {
-    height: 260vh;
+    height: 240vh;
     width: 100vw;
 }
 .timeline-title-container {
@@ -263,7 +263,7 @@ body {
 }
 .timeline-line-container {
     position: relative;
-    height: 100%;
+    height: 70%;
 }
 .scroll-line {
     position: absolute;
@@ -289,7 +289,7 @@ body {
     background-color: var(--navy_color);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
     position: relative;
 
     opacity: 0;
@@ -312,11 +312,13 @@ body {
 .left-card {
     align-self: flex-start;
     margin-left: 7%;
+    margin-top: 0%;
     text-align: right;
 }
 .right-card {
     align-self: flex-end;
     margin-right: 7%;
+    margin-top: 0%;
     text-align: left;
 }
 .card-content {
@@ -348,7 +350,7 @@ body {
 /* The das fundraising section style */
 .das-fundraising-section {
     width: 60vw;
-    height: 500vh;
+    height: 430vh;
     margin: 0 auto;
 }
 .vert-cards-container-title {
@@ -358,7 +360,7 @@ body {
     position: sticky;
     text-align: center;
     top: 4vw;
-    margin: 20vh 0 40vh 0;
+    margin: 0;
     padding: 50px;
     color: var(--green_color);
     background-color: var(--navy_color);
@@ -446,7 +448,7 @@ body {
 }
 .carousel {
     position: relative;
-    width: 70%;
+    width: 60%;
     max-width: 70%;
     overflow: hidden;
 }
@@ -836,83 +838,77 @@ polyline {
 
 
     /* Roadmap section: */
-    .roadmap-section {
+    .timeline-roadmap-section {
+        height: 280vh;
         width: 100vw;
-        height: 150vh;
     }
-    .line {
+    .t-r-s-title {
+        font-size: 6vw;
+        margin: 10vh 0 0 0;
+    }
+    .t-r-s-tagline {
+        font-size: 2.5vw;
+    }
+    .timeline-line-container {
+        height: 100%;
+    }
+    .scroll-line {
         position: absolute;
-        background-color: var(--white-color);
-        box-shadow: 0px 0px 12px var(--white-color);
-        width: 4px;
-        height: 180vh;
-        bottom: 0;
         left: 50%;
-        overflow: hidden;
-    }
-    .scanner-pulse {
-        position: absolute;
         top: 0;
-        left: 0;
-        background: var(--green_color);
-        width: 100%;
-        height: 50px;
-        border-radius: 50%;
-        animation: scanner-loop 3s ease-in-out infinite;
-        filter: blur(1px);
+        width: 5px;
+        height: 100%;
+        transform: translateX(-50%);
+        background-color: var(--green_color, #ffffff);
     }
-    .roadmap-content {
+    .timeline-cards-container {
         position: relative;
-        z-index: 2;
+        top: 10vh;
+        margin: 0 0 0 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 10vw;
     }
-    .roadmap-header {
-        width: 70%;
+    .timeline-card {
+        width: 90%;
+    }
+    .timeline-card-title {
+        font-size: 7vw;
+    }
+    .timeline-card-par {
+        font-size: 4vw;
+    }
+    .left-card {
+        margin-left: 4%;
+        margin-top: 20%;
         text-align: center;
     }
-    .rm-header-text {
-        font-size: 6vw;
-    }
-    .animate {
-        .rm-header-text {
-            animation: scaleText 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-        }
-        .rm-header-text span {
-            animation: fade-in 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-        }
-        .rm-header-text span:nth-child(1) {
-            animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-        }
-        .rm-header-text span:nth-child(2) {
-            animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-        }
-        .rm-header-text span:nth-child(3) {
-            animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-        }
-        .rm-header-text span:nth-child(4) {
-            animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-        }
-        .rm-header-text span:nth-child(5) {
-            animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-        }
-        .rm-header-text span:nth-child(6) {
-            animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-        }
+    .right-card {
+        margin-right: 4%;
+        margin-top: 20%;
+        text-align: center;
     }
     .card-content {
-        padding: 0 20px;
-        margin: 10px 30px;
+        text-align: center;
     }
-    .card-title {
-        font-size: 5vw;
-        float: left;
+    .timeline-point {
+        width: 40px;
+        height: 40px;
+        background-color: var(--green_color);
+        border-radius: 50%;
+        position: relative;
+        top: 50px;
+        left: 0;
+        transform: translate(50%, 0);
+        z-index: 1;
+        clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.3s ease;
     }
-    .card-par {
-        font-size: 3vw;
+    .timeline-point.on-point {
+        opacity: 1;
+        transform: scale(1);
     }
 
 
