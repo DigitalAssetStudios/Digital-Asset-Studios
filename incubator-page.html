@@ -228,7 +228,7 @@
         <div id="carouselExampleIndicators" class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item">
-                    <h3 class="offer-stage-title">Mentor</h3>
+                    <h3 class="offer-stage-title">Mentorship</h3>
                     <p class="offer-stage-par">Our team of experienced advisors become an extension of your leadership, present for the most important moments. A dedicated advisor is allocated to each start-up, but every problem is discussed with the wider team to pool problem solving and achieve insightful impact.<br><br>Think of us as your personal board of directors in the Web3 world.</p>
                 </div>
                 <div class="carousel-item">
@@ -258,6 +258,34 @@
                     <polyline fill="none" stroke="#01c38d" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/>
                 </svg>
             </button>
+                    <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" class="rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" class="rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                <button type="button" class="rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Seperational backgroud element -->
+    <div class="contact-us-bg-element">
+        <div class="overlay-blur">
+            <div class="shape-blob one"></div>
+            <div class="shape-blob two"></div>
+            <div class="shape-blob three"></div>
+            <div class="shape-blob four"></div>
+            <div class="shape-blob five"></div>
+            <div class="shape-blob six"></div>
+            <div class="shape-blob seven"></div>
+            <div class="shape-blob eight"></div>
+            <div class="shape-blob nine"></div>
+            <div class="shape-blob ten"></div>
+            <div class="shape-blob eleven"></div>
+            <div class="shape-blob twelve"></div>
         </div>
     </div>
 
@@ -319,6 +347,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script>
+
+    // offering carousel slide indicator script:
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.carousel-inner');
+            const items = document.querySelectorAll('.carousel-item');
+            const indicators = document.querySelectorAll('[data-carousel-slide-to]');
+            let currentIndex = 0;
+            
+            // Function to update the active slide
+            function updateSlide(index) {
+                items.forEach((item, i) => {
+                    item.classList.toggle('active', i === index);
+                });
+                indicators.forEach((button, i) => {
+                    button.setAttribute('aria-current', i === index ? 'true' : 'false');
+                });
+            }
+
+            // Auto slide functionality
+            const autoSlide = setInterval(() => {
+                currentIndex = (currentIndex + 1) % items.length; // Increment slide index
+                updateSlide(currentIndex);
+            }, 5000); // Change slide every 5 seconds
+
+            // Next button functionality
+            document.querySelector('.carousel-control-next').addEventListener('click', () => {
+                clearInterval(autoSlide); // Stop auto-sliding when manually controlling
+                currentIndex = (currentIndex + 1) % items.length;
+                updateSlide(currentIndex);
+            });
+
+            // Previous button functionality
+            document.querySelector('.carousel-control-prev').addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+        });
+
+
+
+
+
+
 
     // timeline card dectection script:
         // gsap.utils.toArray('.timeline-card').forEach((card, i) => {
@@ -538,19 +609,19 @@
 
 
     // horizontal carousel script:
-        const carousel = document.querySelector('.carousel-inner');
-        const items = document.querySelectorAll('.carousel-item');
-        let currentIndex = 0;
+        // const carousel = document.querySelector('.carousel-inner');
+        // const items = document.querySelectorAll('.carousel-item');
+        // let currentIndex = 0;
 
-        document.querySelector('.carousel-control-next').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % items.length;
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        });
+        // document.querySelector('.carousel-control-next').addEventListener('click', () => {
+        //     currentIndex = (currentIndex + 1) % items.length;
+        //     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // });
 
-        document.querySelector('.carousel-control-prev').addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        });
+        // document.querySelector('.carousel-control-prev').addEventListener('click', () => {
+        //     currentIndex = (currentIndex - 1 + items.length) % items.length;
+        //     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // });
 
 
 

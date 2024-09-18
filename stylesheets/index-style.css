@@ -168,7 +168,7 @@ body {
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    width: 200px;
+    width: 300px;
     pointer-events: all;
     z-index: 5;
     opacity: 1;
@@ -185,7 +185,7 @@ body {
 .section-titles {
     text-decoration: none;
     color: var(--blue-white);
-    font-size: 0.7vw;
+    font-size: 1vw;
     transition: color 0.3s ease;
     cursor: none;
 }
@@ -199,7 +199,7 @@ body {
 .active-link {
     color: var(--green_color);
     font-weight: bold;
-    font-size: 1vw;
+    font-size: 1.3vw;
 }
 
 

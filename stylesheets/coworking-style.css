@@ -229,7 +229,7 @@ body {
     padding: 36px;
     background-color: var(--navy_color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: solid 5px var(--blue-white);
+    /* border: solid 5px var(--blue-white); */
     border-radius: 25px;
     color: var(--white-color);
 }
@@ -251,18 +251,22 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    padding: 0;
 }
 .img-card {
-    padding: 5px;
+    padding: 5px 5px 2px 5px;
     background-color: var(--blue-white);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 25px;
+    width: 70%;
 }
 .img-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 25px;
 }
 
 
