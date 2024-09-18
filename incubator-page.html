@@ -320,6 +320,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script>
 
+    // timeline card dectection script:
+        // gsap.utils.toArray('.timeline-card').forEach((card, i) => {
+        //     ScrollTrigger.create({
+        //         trigger: card,
+        //         start: "top 60%", // Trigger when the top of the card is at 50% of the viewport
+        //         end: "bottom 40%", // End when the bottom of the card is at 50% of the viewport
+        //         toggleClass: { targets: card, className: "active" }, // Add an 'active' class when in view
+        //         markers: false // Remove this if you don't want scroll markers
+        //     });
+        // });
+        gsap.utils.toArray('.timeline-card').forEach((card) => {
+            const isLeftCard = card.classList.contains('left-card');
+
+            gsap.fromTo(card, {
+                    opacity: 0,
+                    scale: 0.95,
+                    x: isLeftCard ? -50 : 50, // Left cards move right (x = -50), Right cards move left (x = 50)
+                },{
+                    opacity: 1,
+                    scale: 1,
+                    x: 0, // Reset to original position
+                    duration: 0.1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 60%",
+                        end: "bottom 30%",
+                        toggleActions: "play reverse play reverse", // Play when in view, reverse when out
+                    }
+                }
+            );
+        });
+
+    // timeline points detection script:
+        gsap.utils.toArray('.timeline-point').forEach((card, i) => {
+            ScrollTrigger.create({
+                trigger: card,
+                start: "top 60%", // Trigger when the top of the card is at 50% of the viewport
+                end: "bottom 15%", // End when the bottom of the card is at 50% of the viewport
+                toggleClass: { targets: card, className: "on-point" }, // Add an 'active' class when in view
+                markers: false // Remove this if you don't want scroll markers
+            });
+        });
+
+
+
     // mouse custom icon trackers:
         const $bigShape = document.querySelector('.cursor-big-shape');
         const $smallShape = document.querySelector('.cursor-small-shape');

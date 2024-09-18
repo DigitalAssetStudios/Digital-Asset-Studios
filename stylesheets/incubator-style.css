@@ -36,6 +36,9 @@ body {
 * {
     box-sizing: border-box;
 }
+.highlight {
+    color: var(--green_color);
+}
 .navigation-content, .navigation-content-mobile {
     position: absolute;
     top: 0;
@@ -283,20 +286,28 @@ body {
     width: 40%;
     height: 20vh;
     padding: 20px;
-    background-color: var(--blue-white);
+    background-color: var(--navy_color);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20vh;
     position: relative;
+
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.5s ease;
+}
+.timeline-card.active {
+    opacity: 1;
+    transform: scale(1);
 }
 .timeline-card-title {
     color: var(--green_color);
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     margin: 0;
 }
 .timeline-card-par {
-    color: var(--navy_color);
-    font-size: 1.2vw;
+    color: var(--blue-white);
+    font-size: 1.8vw;
 }
 .left-card {
     align-self: flex-start;
@@ -312,25 +323,23 @@ body {
     text-align: center;
 }
 .timeline-point {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: var(--green_color);
     border-radius: 50%;
-    /* position: absolute; */
     position: relative;
     top: 50px;
-    left: -15px;
+    left: 0;
     transform: translate(50%, 0);
     z-index: 1;
-
-    clip-path: polygon(
-        50% 0%,
-        90% 25%,
-        90% 75%,
-        50% 100%,
-        10% 75%,
-        10% 25%
-    );
+    clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+.timeline-point.on-point {
+    opacity: 1;
+    transform: scale(1);
 }
 
 
@@ -338,7 +347,7 @@ body {
 
 /* The das fundraising section style */
 .das-fundraising-section {
-    width: 80vw;
+    width: 60vw;
     height: 500vh;
     margin: 0 auto;
 }
@@ -348,8 +357,8 @@ body {
     font-size: 6rem;
     position: sticky;
     text-align: center;
-    top: 1vw;
-    margin-bottom: 40vh;
+    top: 4vw;
+    margin: 20vh 0 40vh 0;
     padding: 50px;
     color: var(--green_color);
     background-color: var(--navy_color);
@@ -448,7 +457,6 @@ body {
 .carousel-item {
     min-width: 100%;
     transition: opacity 0.5s ease;
-    /* background-color: var(--white-color); */
     border: solid 3px var(--green_color);
     border-radius: 25px;
     text-align: center;
@@ -456,11 +464,14 @@ body {
 }
 .offer-stage-title {
     color: var(--green_color);
-    font-size: 3vw;
+    font-size: 4vw;
+    margin: 50px 0 0 0;
 }
 .offer-stage-par {
     color: var(--navy_color);
     color: var(--white-color);
+    margin: 0 0 50px 0;
+    padding: 0 30px;
 }
 .carousel-control-prev,
 .carousel-control-next {

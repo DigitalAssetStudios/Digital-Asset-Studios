@@ -36,6 +36,9 @@ body {
 * {
     box-sizing: border-box;
 }
+.highlight {
+    color: var(--green_color);
+}
 .navigation-content, .navigation-content-mobile {
     position: absolute;
     top: 0;
@@ -215,7 +218,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: var(--green_color);
+    /* background-color: var(--green_color); */
     padding: 20px;
 }
 .space-text-container {
@@ -226,12 +229,14 @@ body {
     padding: 40px;
     background-color: var(--navy_color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border: solid 1px var(--blue-white);
+    border-radius: 25px;
     color: var(--white-color);
 }
 .space-title {
     font-size: 4vw;
     margin: 50px 0;
+    color: var(--green_color);
 }
 .space-par {
     font-size: 2vw;
@@ -240,17 +245,17 @@ body {
 }
 .cape-town-link {
     text-decoration: none;
-    color: var(--white-color);
+    color: var(--green_color);
 }
 .space-img-container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 20px;
 }
 .img-card {
     padding: 5px;
-    background-color: var(--navy_color);
+    background-color: var(--blue-white);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
