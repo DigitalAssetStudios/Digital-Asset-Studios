@@ -226,10 +226,10 @@ body {
     position: sticky;
     top: 20vh;
     margin-right: 20px;
-    padding: 40px;
+    padding: 36px;
     background-color: var(--navy_color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: solid 1px var(--blue-white);
+    border: solid 5px var(--blue-white);
     border-radius: 25px;
     color: var(--white-color);
 }
