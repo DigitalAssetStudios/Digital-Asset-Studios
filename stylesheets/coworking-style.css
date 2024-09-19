@@ -674,7 +674,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        background-color: var(--green_color);
+        /* background-color: var(--green_color); */
         padding: 20px;
     }
     .space-text-container {
@@ -691,8 +691,8 @@ body {
         margin: 5px 0;
     }
     .img-card {
-        padding: 5px;
-        background-color: var(--navy_color);
+        padding: 5px 5px 2px 5px;
+        background-color: var(--blue-white);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
     }
@@ -707,7 +707,7 @@ body {
     /* companies in office section */
     .campnies-section {
         width: 100vw;
-        height: 100vh;
+        height: 150vh;
     }
     .coworking-collab-title {
         font-size: 7vw;
@@ -719,24 +719,29 @@ body {
         margin: 0 0 10px 0;
     }
     .collab-companies-cards {
+        flex-direction: column;
         margin: 10px 0 0 0;
         gap: 0.5rem;
     }
     .collab-card-container {
         background-color: var(--white-color);
-        width: 30vw;
-        height: 40vh;
+        width: 80vw;
+        height: 30vh;
         padding: 0.5rem;
         color: var(--navy_color);
     }
     .collab-logo {
-        width: 15vw;
+        width: 35vw;
         margin: 20px 0;
     }
     .collab-card-par {
         margin: 0 5px;
-        font-size: 3vw;
+        font-size: 4vw;
     }
+    .cta-cad-text {
+        font-size: 5vw;
+    }
+    
 
 
 
