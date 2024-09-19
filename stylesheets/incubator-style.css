@@ -1317,78 +1317,74 @@ polyline {
     .das-offering-text {
         width: 100%;
         text-align: center;
+        margin-bottom: 2vh;
     }
     .offering-title {
-        font-size: 6vw;
+        font-size: 8vw;
         color: var(--green_color);
         margin: 0;
     }
     .offering-tagline {
-        font-size: 3vw;
+        font-size: 5vw;
         margin: 0 0 50px 0;
     }
-    .carousel {
+    .slideshow-container {
+        width: 90%;
         position: relative;
-        width: 60%;
-        max-width: 70%;
+        margin: 20px;
         overflow: hidden;
     }
-    .carousel-inner {
-        display: flex;
-        transition: transform 0.5s ease;
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: var(--green_color);
+        font-size: 4vw;
+        transition: 0.6s ease;
+        user-select: none;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
     }
     .carousel-item {
-        min-width: 100%;
-        transition: opacity 0.5s ease;
-        border: solid 3px var(--green_color);
-        border-radius: 25px;
         text-align: center;
-        padding: 30px 80px;
     }
     .offer-stage-title {
         color: var(--green_color);
-        font-size: 4vw;
-        margin: 50px 0 0 0;
+        font-size: 6vw;
+        margin: 0 0 50vh 0;
     }
     .offer-stage-par {
-        color: var(--navy_color);
-        color: var(--white-color);
-        margin: 0 0 50px 0;
-        padding: 0 30px;
-    }
-    .carousel-control-prev,
-    .carousel-control-next {
+        color: var(--blue-white);
+        font-size: 15px;
+        padding: 8px 70px;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: none;
-        border: none;
-        cursor: pointer;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
     }
-    .carousel-control-prev {
-        left: 5px;
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
     }
-    .carousel-control-next {
-        right: 5px;
+    .active, .dot:hover {
+        background-color: var(--green_color);
     }
-    .carousel-control-prev:hover polyline,
-    .carousel-control-prev:focus polyline {
-        stroke-width: 3;
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
     }
-    .carousel-control-prev:active polyline {
-        stroke-width: 6;
-        transition: all 100ms ease-in-out;
-    }
-    .carousel-control-next:hover polyline,
-    .carousel-control-next:focus polyline {
-        stroke-width: 3;
-    }
-    .carousel-control-next:active polyline {
-        stroke-width: 6;
-        transition: all 100ms ease-in-out;
-    }
-    polyline {
-        transition: all 250ms ease-in-out;
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
     }
 
 
