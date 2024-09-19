@@ -243,7 +243,7 @@ body {
 
 /* roadmap section style */
 .timeline-roadmap-section {
-    height: 240vh;
+    height: 260vh;
     width: 100vw;
 }
 .timeline-title-container {
@@ -350,8 +350,8 @@ body {
 
 /* The das fundraising section style */
 .das-fundraising-section {
-    width: 60vw;
-    height: 470vh;
+    width: 100vw;
+    height: 440vh;
     margin: 0 auto;
 }
 .vert-cards-container-title {
@@ -360,7 +360,7 @@ body {
     font-size: 6rem;
     position: sticky;
     text-align: center;
-    top: 4vw;
+    top: 3vw;
     margin: 0;
     padding: 50px;
     color: var(--green_color);
@@ -375,10 +375,12 @@ body {
     grid-template-rows: repeat(var(--numcards), var(--card-height));
     gap: var(--card-margin);
     padding: 0;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 .vert-card {
     position: sticky;
-    top: 13vw;
+    top: 15vw;
     padding-top: 0;
     transform-origin: 50% 0%;
     will-change: transform;
@@ -451,7 +453,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     background-color: var(--navy_color);
 }
 .das-offering-text {
@@ -468,7 +470,7 @@ body {
     font-size: 3vw;
     margin: 0 0 50px 0;
 }
-.carousel {
+/* .carousel {
     position: relative;
     width: 60%;
     max-width: 70%;
@@ -480,8 +482,6 @@ body {
 }
 .carousel-item {
     min-width: 100%;
-    transition: opacity 0.5s ease;
-    /* border: solid 3px var(--green_color); */
     border-radius: 25px;
     text-align: center;
     padding: 0px 80px;
@@ -531,6 +531,77 @@ body {
 }
 polyline {
     transition: all 250ms ease-in-out;
+}
+.active, .dot:hover {
+    background-color: var(--green_color);
+}
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+} */
+.slideshow-container {
+    width: 60%;
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--green_color);
+    font-size: 4vw;
+    transition: 0.6s ease;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.carousel-item {
+    text-align: center;
+}
+.offer-stage-title {
+    color: var(--green_color);
+    font-size: 3vw;
+    margin: 0 0 20vh 0;
+}
+.offer-stage-par {
+    color: var(--blue-white);
+    font-size: 15px;
+    padding: 8px 70px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: var(--green_color);
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
 
@@ -942,6 +1013,37 @@ polyline {
 
 
 
+    /* page seperator element: */
+    .background-container {
+        width: 20vw;
+        height: 40vh;
+    }
+    .contact-us-bg-element {
+        width: 100vw;
+        height: 20vh;
+        z-index: 1;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    .overlay-blur {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-height: 40vh;
+        position: absolute;
+        width: 100%;
+        filter: blur(40px);
+    }
+    .shape-blob {
+        background: var(--green_color);
+        border-radius: 40% 50% 30% 40%;
+        opacity: 0.7;
+        transform: rotate(180deg);
+        animation: none;
+    }
+
+
+
     /* Navigation Bar: */
     .navigation-content {
         opacity: 0;
@@ -1165,6 +1267,7 @@ polyline {
     #vert-cards-container {
         gap: 50vh;
         padding: 20px;
+        margin: 0;
     }
     .vert-card {
         width: 90vw; /* Adjust card width to fit smaller screens */

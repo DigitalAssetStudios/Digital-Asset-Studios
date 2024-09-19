@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" type="image/x-icon" href="./assets/green-das-logo.svg">
     <title>The Global Incubator</title>
 </head>
@@ -225,25 +226,25 @@
             <h2 class="offering-title">The DAS Offering</h2>
             <h3 class="offering-tagline">Your All-Access Pass to Web3 Success</h3>
         </div>
-        <div id="carouselExampleIndicators" class="carousel">
+        <!-- <div id="carouselExampleIndicators" class="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item">
+                <div class="carousel-item mySlides">
                     <h3 class="offer-stage-title">Mentorship</h3>
                     <p class="offer-stage-par">Our team of experienced advisors become an extension of your leadership, present for the most important moments. A dedicated advisor is allocated to each start-up, but every problem is discussed with the wider team to pool problem solving and achieve insightful impact.<br><br>Think of us as your personal board of directors in the Web3 world.</p>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item mySlides">
                     <h3 class="offer-stage-title">Unmatched Expertise</h3>
                     <p class="offer-stage-par">We don't just talk strategy, we deliver results. Our comprehensive suite of services covers everything from financial engineering and global structuring to fundraising support and talent acquisition. We provide extreme due care with commercial and financial professional services to ensure you have the experts you need to build a solid foundation for your Web3 startup.</p>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item mySlides">
                     <h3 class="offer-stage-title">Unlock Capital</h3>
                     <p class="offer-stage-par">Navigating the Web3 funding landscape can be tricky. We help you secure the right resources, at the right time, by guiding you towards suitable grants, loans, and providing professional application support.<br><br>We'll also prepare you to pitch your vision like a pro and connect you with a network of investors, including angels, VCs, and family offices, who are ready to back you.</p>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item mySlides">
                     <h3 class="offer-stage-title">Network Effect</h3>
                     <p class="offer-stage-par">Gain your advantage through collaboration with other Web3 pioneers, seasoned founders, partners and investors within our ecosystem. A collaborative environment designed to accelerate your innovation & growth.</p>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item mySlides">
                     <h3 class="offer-stage-title">Dedicated Work Space</h3>
                     <p class="offer-stage-par">We offer a vibrant co-working space in the best street in Cape Town, South Africa (New global hubs coming soon)<br><br>Our space includes high-speed Wi-Fi, meeting areas, refreshments, and a fun zone to spark creativity</p>
                 </div>
@@ -258,15 +259,56 @@
                     <polyline fill="none" stroke="#01c38d" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/>
                 </svg>
             </button>
-                    <!-- Carousel Indicators -->
-            <div class="carousel-indicators">
-                <button type="button" class="rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                <button type="button" class="rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                <button type="button" class="rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                <button type="button" class="rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                <button type="button" class="rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
             </div>
-        </div>
+        </div> -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade carousel-item">
+                <h3 class="offer-stage-title">Mentorship</h3>
+                <p class="offer-stage-par">Our team of experienced advisors become an extension of your leadership, present for the most important moments. A dedicated advisor is allocated to each start-up, but every problem is discussed with the wider team to pool problem solving and achieve insightful impact.<br><br>Think of us as your personal board of directors in the Web3 world.</p>
+            </div>
+            
+            <div class="mySlides fade carousel-item">
+                <h3 class="offer-stage-title">Unmatched Expertise</h3>
+                <p class="offer-stage-par">We don't just talk strategy, we deliver results. Our comprehensive suite of services covers everything from financial engineering and global structuring to fundraising support and talent acquisition. We provide extreme due care with commercial and financial professional services to ensure you have the experts you need to build a solid foundation for your Web3 startup.</p>
+            </div>
+            
+            <div class="mySlides fade carousel-item">
+                <h3 class="offer-stage-title">Unlock Capital</h3>
+                <p class="offer-stage-par">Navigating the Web3 funding landscape can be tricky. We help you secure the right resources, at the right time, by guiding you towards suitable grants, loans, and providing professional application support.<br><br>We'll also prepare you to pitch your vision like a pro and connect you with a network of investors, including angels, VCs, and family offices, who are ready to back you.</p>
+            </div>
+
+            <div class="mySlides fade carousel-item">
+                <h3 class="offer-stage-title">Network Effect</h3>
+                <p class="offer-stage-par">Gain your advantage through collaboration with other Web3 pioneers, seasoned founders, partners and investors within our ecosystem. A collaborative environment designed to accelerate your innovation & growth.</p>
+            </div>
+
+            <div class="mySlides fade carousel-item">
+                <h3 class="offer-stage-title">Dedicated Work Space</h3>
+                <p class="offer-stage-par">We offer a vibrant co-working space in the best street in Cape Town, South Africa (New global hubs coming soon)<br><br>Our space includes high-speed Wi-Fi, meeting areas, refreshments, and a fun zone to spark creativity</p>
+            </div>
+            
+            <a class="prev shrinkable" onclick="plusSlides(-1)">❮</a>
+            <a class="next shrinkable" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span> 
+            </div>
+          
+          
     </div>
 
 
@@ -347,49 +389,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script>
-
-    // offering carousel slide indicator script:
-        document.addEventListener('DOMContentLoaded', function () {
-            const carousel = document.querySelector('.carousel-inner');
-            const items = document.querySelectorAll('.carousel-item');
-            const indicators = document.querySelectorAll('[data-carousel-slide-to]');
-            let currentIndex = 0;
-            
-            // Function to update the active slide
-            function updateSlide(index) {
-                items.forEach((item, i) => {
-                    item.classList.toggle('active', i === index);
-                });
-                indicators.forEach((button, i) => {
-                    button.setAttribute('aria-current', i === index ? 'true' : 'false');
-                });
-            }
-
-            // Auto slide functionality
-            const autoSlide = setInterval(() => {
-                currentIndex = (currentIndex + 1) % items.length; // Increment slide index
-                updateSlide(currentIndex);
-            }, 5000); // Change slide every 5 seconds
-
-            // Next button functionality
-            document.querySelector('.carousel-control-next').addEventListener('click', () => {
-                clearInterval(autoSlide); // Stop auto-sliding when manually controlling
-                currentIndex = (currentIndex + 1) % items.length;
-                updateSlide(currentIndex);
-            });
-
-            // Previous button functionality
-            document.querySelector('.carousel-control-prev').addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + items.length) % items.length;
-                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-            });
-        });
-
-
-
-
-
-
 
     // timeline card dectection script:
         // gsap.utils.toArray('.timeline-card').forEach((card, i) => {
@@ -627,11 +626,30 @@
 
 
 
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-
-
-
-
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++){
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
 
 
 
