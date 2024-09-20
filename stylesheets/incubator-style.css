@@ -284,7 +284,7 @@ body {
     align-items: center;
 }
 .timeline-card {
-    width: 45%;
+    width: 35%;
     height: 20vh;
     padding: 20px;
     background-color: var(--navy_color);
@@ -311,13 +311,13 @@ body {
 }
 .left-card {
     align-self: flex-start;
-    margin-left: 3%;
+    margin-left: 13%;
     margin-top: 0%;
     text-align: right;
 }
 .right-card {
     align-self: flex-end;
-    margin-right: 3%;
+    margin-right: 13%;
     margin-top: 0%;
     text-align: left;
 }
@@ -370,12 +370,13 @@ body {
     margin-bottom: var(--card-margin);
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr;
+    justify-content: center;
+    grid-template-columns: 65vw;
     grid-template-rows: repeat(var(--numcards), var(--card-height));
     gap: var(--card-margin);
     padding: 0;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    /* margin-left: 12vw;
+    margin-right: 15vw; */
 }
 .vert-card {
     position: sticky;
@@ -399,16 +400,19 @@ body {
 .vert-card-text {
     grid-area: text;
     width: 80%;
-    place-self: center;
-    text-align: left;
+    /* place-self: center; */
+    /* text-align: left; */
+    margin: 50px;
+    padding: 0px;
     display: grid;
-    gap: 1em;
+    /* gap: 1rem; */
     place-items: start;
 }
 .vert-card-content > figure {
     grid-area: img;
     overflow: hidden;
     border-radius: 20px;
+    margin: 40px;
 }
 .vert-card-content > figure > img {
     width: 100%;
@@ -423,7 +427,9 @@ body {
 }
 .vert-card-par {
     font-weight: 300;
+    font-size: 1vw;
     padding: 0;
+    /* margin: -50px 0 -50px 0; */
 }
 .carousel-indicators {
     position: relative;
@@ -497,13 +503,13 @@ body {
 .offer-stage-title {
     color: var(--green_color);
     font-size: 3vw;
-    margin: 0 0 23vh 0;
+    margin: 0 0 0 0;
 }
 .offer-stage-par {
     color: var(--blue-white);
     font-size: 25px;
     padding: 0px 10vw;
-    position: absolute;
+    /* position: absolute; */
     bottom: -20px;
     width: 100%;
     text-align: center;
@@ -511,7 +517,7 @@ body {
 .dot {
     height: 15px;
     width: 15px;
-    margin: 0 2px;
+    margin: 10px 2px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
