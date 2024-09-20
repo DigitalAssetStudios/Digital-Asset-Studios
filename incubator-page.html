@@ -255,15 +255,94 @@
             </div>
             
             <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-              <span class="dot" onclick="currentSlide(3)"></span> 
-              <span class="dot" onclick="currentSlide(4)"></span> 
-              <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
             </div>
-
-            
-          
+        </div>
+        <div class="infinite-carousel">
+            <div class="logo-scrolling-container">
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/arbitrum-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/avalanche-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/base-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/bitcoin-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/bnbchain-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/canto-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/cardano-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/celo-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/cronos-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/ethereum-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/fantom-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/gnosis-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/harmony-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/lighting-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/moonriver-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/near-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/optimism-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/polygon-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/solana-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/sui-b-logo.png" alt="logo">
+                </div>
+                <div>
+                    <img src="./assets/ecosystem-logos/ecosystem-logos/tron-b-logo.png" alt="logo">
+                </div>
+            </div>
+        </div>
+        <div class="scrolling-partner-section">
+            <div class="scrolling-partners">
+                <img src="./assets/ecosystem-logos/partners-logos/abc-b-logo.png" alt="logo">
+                <img src="./assets/ecosystem-logos/partners-logos/beyondbeing-b-logo.png" alt="logo">
+                <img src="./assets/ecosystem-logos/partners-logos/captial-b-logo.png" alt="logo">
+                <img src="./assets/ecosystem-logos/partners-logos/contango-b-logo.png" alt="logo">
+                <img src="./assets/ecosystem-logos/partners-logos/emurgo-b-logo.png" alt="logo">
+                <img src="./assets/ecosystem-logos/partners-logos/fanblock-b-logo.png" alt="logo">
+                <img src="./assets/ecosystem-logos/partners-logos/moment-b-logo.png" alt="logo" class="item">
+                <img src="./assets/ecosystem-logos/partners-logos/near-b-logo.png" alt="logo" class="item">
+                <img src="./assets/ecosystem-logos/partners-logos/solve-for-why-b-logo.png" alt="logo" class="item">
+                <img src="./assets/ecosystem-logos/partners-logos/tla-b-logo.png" alt="logo" class="item">
+            </div>
+        </div>
     </div>
 
 
@@ -554,24 +633,6 @@
 
 
     // horizontal carousel script:
-        // const carousel = document.querySelector('.carousel-inner');
-        // const items = document.querySelectorAll('.carousel-item');
-        // let currentIndex = 0;
-
-        // document.querySelector('.carousel-control-next').addEventListener('click', () => {
-        //     currentIndex = (currentIndex + 1) % items.length;
-        //     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        // });
-
-        // document.querySelector('.carousel-control-prev').addEventListener('click', () => {
-        //     currentIndex = (currentIndex - 1 + items.length) % items.length;
-        //     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        // });
-
-
-
-
-
         let slideIndex = 1;
         showSlides(slideIndex);
 
@@ -596,6 +657,12 @@
             slides[slideIndex-1].style.display = "block";  
             dots[slideIndex-1].className += " active";
         }
+
+
+
+
+    // infinite carousel script:
+
 
 
 
