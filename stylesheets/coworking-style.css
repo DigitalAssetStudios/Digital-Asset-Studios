@@ -924,7 +924,7 @@ body {
     /* companies in office section */
     .campnies-section {
         width: 100vw;
-        height: 150vh;
+        height: 180vh;
     }
     .coworking-collab-title {
         font-size: 7vw;
@@ -943,7 +943,7 @@ body {
     .collab-card-container {
         background-color: var(--white-color);
         width: 80vw;
-        height: 30vh;
+        height: 40vh;
         padding: 0.5rem;
         color: var(--navy_color);
     }
