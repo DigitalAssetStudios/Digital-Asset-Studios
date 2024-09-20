@@ -400,12 +400,12 @@ body {
 .vert-card-text {
     grid-area: text;
     width: 80%;
-    /* place-self: center; */
-    /* text-align: left; */
+    place-self: center;
+    text-align: left;
     margin: 50px;
     padding: 0px;
     display: grid;
-    /* gap: 1rem; */
+    gap: 1rem;
     place-items: start;
 }
 .vert-card-content > figure {
@@ -1229,12 +1229,13 @@ body {
     }
     #vert-cards-container {
         gap: 50vh;
-        padding: 20px;
-        margin: 0;
+        padding: 0;
+        margin: 0 0 0 -5vw;
+        align-content: center;
     }
     .vert-card {
-        width: 90vw; /* Adjust card width to fit smaller screens */
-        display: inline-block; /* Align items horizontally */
+        width: 70vw; /* Adjust card width to fit smaller screens */
+        display: inline-block;
         transform: none; /* Remove sticky behavior for horizontal layout */
         top: 30vw;
     }
@@ -1253,13 +1254,15 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0;
     }
     .vert-card-header {
-        font-size: 6vw;
+        font-size: 10vw;
     }
     .vert-card-par {
         width: 80%;
         white-space: wrap;
+        font-size: 4vw;
     }
     .vert-card-content > figure {
         display: none; /* Hide the image */
