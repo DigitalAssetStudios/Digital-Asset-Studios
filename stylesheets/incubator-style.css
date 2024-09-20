@@ -284,12 +284,11 @@ body {
     align-items: center;
 }
 .timeline-card {
-    width: 40%;
+    width: 45%;
     height: 20vh;
     padding: 20px;
     background-color: var(--navy_color);
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 10vh;
     position: relative;
 
@@ -312,13 +311,13 @@ body {
 }
 .left-card {
     align-self: flex-start;
-    margin-left: 7%;
+    margin-left: 3%;
     margin-top: 0%;
     text-align: right;
 }
 .right-card {
     align-self: flex-end;
-    margin-right: 7%;
+    margin-right: 3%;
     margin-top: 0%;
     text-align: left;
 }
@@ -470,81 +469,6 @@ body {
     font-size: 3vw;
     margin: 0 0 50px 0;
 }
-/* .carousel {
-    position: relative;
-    width: 60%;
-    max-width: 70%;
-    overflow: hidden;
-}
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-.carousel-item {
-    min-width: 100%;
-    border-radius: 25px;
-    text-align: center;
-    padding: 0px 80px;
-}
-.offer-stage-title {
-    color: var(--green_color);
-    font-size: 3vw;
-    margin: 50px 0 20px 0;
-}
-.offer-stage-par {
-    color: var(--navy_color);
-    color: var(--white-color);
-    margin: 0 0 50px 0;
-    padding: 0 30px;
-    font-size: 1.4vw;
-}
-.carousel-control-prev,
-.carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-.carousel-control-prev {
-    left: 5px;
-}
-.carousel-control-next {
-    right: 5px;
-}
-.carousel-control-prev:hover polyline,
-.carousel-control-prev:focus polyline {
-    stroke-width: 3;
-}
-.carousel-control-prev:active polyline {
-    stroke-width: 6;
-    transition: all 100ms ease-in-out;
-}
-.carousel-control-next:hover polyline,
-.carousel-control-next:focus polyline {
-    stroke-width: 3;
-}
-.carousel-control-next:active polyline {
-    stroke-width: 6;
-    transition: all 100ms ease-in-out;
-}
-polyline {
-    transition: all 250ms ease-in-out;
-}
-.active, .dot:hover {
-    background-color: var(--green_color);
-}
-.dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-} */
 .slideshow-container {
     width: 60%;
     position: relative;
@@ -572,14 +496,14 @@ polyline {
 .offer-stage-title {
     color: var(--green_color);
     font-size: 3vw;
-    margin: 0 0 20vh 0;
+    margin: 0 0 23vh 0;
 }
 .offer-stage-par {
     color: var(--blue-white);
-    font-size: 15px;
-    padding: 8px 70px;
+    font-size: 25px;
+    padding: 0px 10vw;
     position: absolute;
-    bottom: 8px;
+    bottom: -20px;
     width: 100%;
     text-align: center;
 }
