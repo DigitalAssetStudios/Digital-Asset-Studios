@@ -575,7 +575,6 @@ body {
     overflow: hidden;
     white-space: nowrap;
     padding: 20px;
-    /* background-color: var(--blue-white); */
     position: relative;
 }
 .infinite-eco-carousel-section::before,
@@ -588,20 +587,12 @@ body {
     z-index: 2;
     pointer-events: none;
 }
-/* .infinite-eco-carousel-section::before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--navy_color));
-} */
-/* .infinite-eco-carousel-section::after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--navy_color));
-} */
 .infinite-eco-carousel-section:hover .scrolling-ecosystem {
     animation-play-state: paused;
 }
 .scrolling-ecosystem {
     display: inline-block;
-    animation: 55s infi-scroll infinite linear;
+    animation: infi-scroll 55s infinite linear;
 }
 .eco-item {
     height: 15px;
@@ -612,7 +603,7 @@ body {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 .infinite-part-carousel-section {
@@ -644,7 +635,7 @@ body {
 }
 @keyframes left-infi-scroll {
     from {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
     to {
         transform: translateX(0);
