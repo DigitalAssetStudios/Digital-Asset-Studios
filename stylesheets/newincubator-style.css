@@ -1,8 +1,8 @@
 /* Defined Variable */
 :root {
-    --navy_color: rgba(25, 30, 41, 1);
+    --navy_color: rgba(25, 30, 41);
     --green_color: rgb(1, 195, 141);
-    --white-color: rgba(245, 248, 255, 1);
+    --white-color: rgba(245, 248, 255);
     --blue-white: rgba(235, 241, 255, 1);
     --main-font: "Black Future", "sans-serif";
     --sup-font: "Lato", sans-serif;
@@ -459,8 +459,9 @@ body {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 120vh;
+    height: 80vh;
     background-color: var(--navy_color);
+    margin-top: 20vh;
 }
 .das-offering-text {
     width: 100%;
@@ -566,6 +567,89 @@ body {
     }
 }
 
+
+
+
+/* infinit carousel styling */
+.infinite-eco-carousel-section {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px;
+    /* background-color: var(--blue-white); */
+    position: relative;
+}
+.infinite-eco-carousel-section::before,
+.infinite-eco-carousel-section::after {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+}
+/* .infinite-eco-carousel-section::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--navy_color));
+} */
+/* .infinite-eco-carousel-section::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--navy_color));
+} */
+.infinite-eco-carousel-section:hover .scrolling-ecosystem {
+    animation-play-state: paused;
+}
+.scrolling-ecosystem {
+    display: inline-block;
+    animation: 55s infi-scroll infinite linear;
+}
+.eco-item {
+    height: 15px;
+    margin: 0 40px;
+}
+@keyframes infi-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.infinite-part-carousel-section {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px;
+    position: relative;
+}
+.infinite-part-carousel-section::before,
+.infinite-part-carousel-section::after {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+}
+.infinite-part-carousel-section:hover .scrolling-partners {
+    animation-play-state: paused;
+}
+.scrolling-partners {
+    display: inline-block;
+    animation: 45s left-infi-scroll infinite linear;
+}
+.part-item {
+    height: 15px;
+    margin: 0 40px;
+}
+@keyframes left-infi-scroll {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 
 
 
