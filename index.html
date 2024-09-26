@@ -213,15 +213,17 @@
 
         <!-- Contact Us section -->
         <div class="contact-us-section section" id="send-us-memes">
-            <div class="cu-upper-content" >
+            <!-- <div class="cu-upper-content" >
                 <div class="cu-title">SEND <span class="highlight">US</span> MEMES</div>
-            </div>
+            </div> -->
+            <div class="cu-title">SEND <span class="highlight">US</span> MEMES</div>
             <div class="social-media-links">
                 <a href="https://www.linkedin.com/company/digital-asset-studios/" target="_blank" >
                     <img src="./assets/linkedin-icon.svg" alt="linked In icon" class="social-media-icon">
                 </a>
             </div>
-            <div class="cu-down-content">
+            <a href="mailto:startups@digitalassetstudios.xyz" class="contact-bt-email">Contact Us</a>
+            <!-- <div class="cu-down-content">
                 <form action="send-email.php" method="POST" class="contact-form">
                     <div class="form-content">
                         <div class="input-container mobile-full-length">
@@ -254,7 +256,7 @@
                         <span class="form-bt-text">SEND</span>
                     </button>
                 </form>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -490,36 +492,36 @@
 
 
         // contact sending email script:
-        document.querySelector('.contact-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
+        // document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+        //     e.preventDefault();
             
-            const formData = {
-                firstName: document.getElementById('firstname').value,
-                lastName: document.getElementById('lastname').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
+        //     const formData = {
+        //         firstName: document.getElementById('firstname').value,
+        //         lastName: document.getElementById('lastname').value,
+        //         email: document.getElementById('email').value,
+        //         subject: document.getElementById('subject').value,
+        //         message: document.getElementById('message').value
+        //     };
 
-            try {
-                const response = await fetch('YOUR_BACKEND_API_URL', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData),
-                });
+        //     try {
+        //         const response = await fetch('YOUR_BACKEND_API_URL', {
+        //             method: 'POST',
+        //             headers: {
+        //                 'Content-Type': 'application/json',
+        //             },
+        //             body: JSON.stringify(formData),
+        //         });
 
-                if (response.ok) {
-                    alert("Your message has been sent!");
-                } else {
-                    alert("Something went wrong. Please try again.");
-                }
-            } catch (error) {
-                console.error("Error:", error);
-                alert("An error occurred while sending the message.");
-            }
-        });
+        //         if (response.ok) {
+        //             alert("Your message has been sent!");
+        //         } else {
+        //             alert("Something went wrong. Please try again.");
+        //         }
+        //     } catch (error) {
+        //         console.error("Error:", error);
+        //         alert("An error occurred while sending the message.");
+        //     }
+        // });
 
 
 

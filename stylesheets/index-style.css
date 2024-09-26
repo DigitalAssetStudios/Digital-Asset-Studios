@@ -700,22 +700,23 @@ body {
 
 /* Contact Us section */
 .contact-us-section {
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--navy_color);
 }
 .cu-upper-content {
-    height: 56%;
+    /* height: 56%; */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .cu-title {
-    font-size: 5vw;
+    font-size: 6vw;
     font-family: var(--main-font);
 }
 .social-media-links {
@@ -731,6 +732,29 @@ body {
     cursor: none;
 }
 .cu-down-content {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.contact-bt-email {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--green_color);
+    color: var(--blue-white);
+    font-size: 3vw;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.contact-bt-email:hover {
+    background-color: var(--blue-white);
+    color: var(--green_color);
+}
+/* .cu-down-content {
     height: 40%;
     width: 100%;
     display: flex;
@@ -874,7 +898,7 @@ body {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
-}
+} */
 
 
 
